@@ -39,8 +39,104 @@
       };
     </script>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Mobile menu overlay styles */
+      .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.7);
+        z-index: 100;
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+      }
+      .mobile-menu {
+        background: #fff;
+        width: 80vw;
+        max-width: 320px;
+        height: 100vh;
+        padding: 2rem 1.5rem;
+        box-shadow: -2px 0 16px rgba(0,0,0,0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .mobile-menu-close {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 2rem;
+        align-self: flex-end;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      @media (min-width: 768px) {
+        .mobile-menu-overlay { display: none !important; }
+      }
+    </style>
   </head>
   <body class="font-sans bg-white">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <nav class="mobile-menu">
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu"><i class="ri-close-line"></i></button>
+        <ul>
+          <li>
+            <a href="#" class="flex items-center text-gray-700 text-lg gap-3" data-translate="home">
+              <i class="ri-home-4-line"></i> ホーム
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center text-gray-700 text-lg gap-3" data-translate="property-search">
+              <i class="ri-search-line"></i> 物件検索
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center text-gray-700 text-lg gap-3" data-translate="services">
+              <i class="ri-service-line"></i> サービス
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center text-gray-700 text-lg gap-3" data-translate="company-info">
+              <i class="ri-building-line"></i> 会社情報
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center text-gray-700 text-lg gap-3" data-translate="contact">
+              <i class="ri-mail-line"></i> お問い合わせ
+            </a>
+          </li>
+        </ul>
+        <div class="mt-8">
+          <div class="language-selector" id="mobileLanguageSelector">
+            <button class="flex items-center space-x-1 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-button text-gray-700 w-full justify-between" aria-expanded="false" aria-controls="mobileLanguageDropdown" id="mobileLanguageButton">
+              <span>日本語</span>
+              <div class="w-4 h-4 flex items-center justify-center transition-transform duration-200" id="mobileLanguageArrow">
+                <i class="ri-arrow-down-s-line"></i>
+              </div>
+            </button>
+            <div id="mobileLanguageDropdown" class="language-dropdown bg-white shadow-lg rounded-md overflow-hidden hidden mt-2 w-full">
+              <a href="#" data-lang="en" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap">English</a>
+              <a href="#" data-lang="vi" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap">Tiếng Việt</a>
+              <a href="#" data-lang="ne" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap">नेपाली</a>
+              <a href="#" data-lang="my" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap">မြန်မာ</a>
+              <a href="#" data-lang="bn" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap">বাংলা</a>
+              <a href="#" data-lang="zh" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap">中文</a>
+              <a href="#" data-lang="ko" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap">한국어</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
     <!-- Header -->
     <header
       class="w-full bg-white/90 backdrop-blur-sm fixed top-0 z-50 shadow-sm"
@@ -67,7 +163,7 @@
             CareEarth & GrowTeC
           </h1>
         </div>
-        <div class=" md:flex items-center space-x-8">
+        <div class=" md:flex items-center space-x-8 hidden md:block">
           <nav>
             <ul class="flex space-x-6">
               <li>
@@ -176,11 +272,14 @@
             </div>
           </div>
         </div>
-        <div class="md:hidden">
+        <div class="md:hidden block">
           <button
             class="w-10 h-10 flex items-center justify-center text-gray-700"
+            id="mobileMenuButton"
+            aria-label="Open menu"
           >
-            <i class="ri-menu-line ri-lg"></i>
+            <!-- Unicode hamburger icon fallback -->
+            <span style="font-size:2rem;line-height:1;">&#9776;</span>
           </button>
         </div>
       </div>
@@ -1045,7 +1144,7 @@
           'testimonials': 'প্রশংসাপত্র',
           'testimonials-desc': 'আমাদের সেবা ব্যবহারকারী গ্রাহকদের মতামত শোনুন',
           'testimonial-1': '“আমি আমার প্রয়োজনীয়তার সাথে সম্পূর্ণ মিলে যাওয়া প্রপার্টি পেয়ে খুব সন্তুষ্ট। কর্মকর্তাদের নিবেদিত সমর্থনও অসাধারণ ছিল, এবং তাদের কারণে আমি আমার আদর্শ বাড়ি পেয়েছি।”',
-          'testimonial-2': '“আমাকে চাকরি পরিবর্তন এবং স্থানান্তর একসঙ্গে পরিচালনা করতে হয়েছিল, যা চাপের ছিল, কিন্তু CareEarth & GROWTEC এর মোট সমর্থনের কারণে আমি আমার নতুন জীবন সুগমভাবে শুরু করতে পেরেছি।”',
+          'testimonial-2': '“আমাকে চাকরি পরিবর্তন এবং স্থানান্তর একসাথে পরিচালনা করতে হয়েছিল, যা চাপের ছিল, কিন্তু CareEarth & GROWTEC এর মোট সমর্থনের কারণে আমি আমার নতুন জীবন সুগমভাবে শুরু করতে পেরেছি।”',
           'testimonial-3': '“প্রথমবার একা থাকার জন্য আমি উদ্বিগ্ন ছিলাম, কিন্তু প্রপার্টি অনুসন্ধান থেকে চুক্তি প্রক্রিয়া এবং স্থানান্তর পর্যন্ত সমর্থন খুব যত্নের সাথে পরিচালিত হয়েছে, যার ফলে আমি নতুন জীবন শান্ত মনে শুরু করতে পেরেছি।”',
           'start-ideal-life': 'আপনার আদর্শ জীবন শুরু করুন',
           'cta-desc': 'আমরা আপনার প্রয়োজন অনুযায়ী কাস্টমাইজড সেবা প্রদান করি। আজই বিনামূল্যে পরামর্শ থেকে শুরু করুন।',
@@ -1060,15 +1159,26 @@
         }
       };
 
-      // Mobile Menu
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuButton = document.querySelector(".md\\:hidden button");
-        if (menuButton) {
-          menuButton.addEventListener("click", function () {
-            alert("モバイルメニューが開きます");
-          });
-        }
-      });
+      // Mobile Menu Overlay logic
+      const mobileMenuButton = document.getElementById('mobileMenuButton');
+      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      const mobileMenuClose = document.getElementById('mobileMenuClose');
+      if (mobileMenuButton && mobileMenuOverlay && mobileMenuClose) {
+        mobileMenuButton.addEventListener('click', function() {
+          mobileMenuOverlay.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        });
+        mobileMenuClose.addEventListener('click', function() {
+          mobileMenuOverlay.style.display = 'none';
+          document.body.style.overflow = '';
+        });
+        mobileMenuOverlay.addEventListener('click', function(e) {
+          if (e.target === mobileMenuOverlay) {
+            mobileMenuOverlay.style.display = 'none';
+            document.body.style.overflow = '';
+          }
+        });
+      }
 
       // Loading Handler
       function hideLoading() {
