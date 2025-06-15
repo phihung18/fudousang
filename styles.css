@@ -1,20 +1,33 @@
-:where([class^="ri-"])::before { content: "\f3c2"; }
+:where([class^="ri-"])::before {
+  content: "\f3c2";
+}
+
 .hero-section {
   background-image: linear-gradient(to right, rgba(30, 64, 175, 0.9), rgba(59, 130, 246, 0.8)),
-  url('https://readdy.ai/api/search-image?query=modern%20office%20building%20with%20glass%20facade%2C%20blue%20sky%2C%20professional%20environment%2C%20corporate%20headquarters%2C%20clean%20design%2C%20minimalist%20architecture%2C%20high%20quality%20professional%20photo&width=1920&height=1080&seq=12345&orientation=landscape');
+    url('https://readdy.ai/api/search-image?query=modern%20office%20building%20with%20glass%20facade%2C%20blue%20sky%2C%20professional%20environment%2C%20corporate%20headquarters%2C%20clean%20design%2C%20minimalist%20architecture%2C%20high%20quality%20professional%20photo&width=1920&height=1080&seq=12345&orientation=landscape');
   background-size: cover;
   background-position: center;
 }
+
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(20 21 26);
+  font-size: 2rem;
+}
+
 .stat-card {
   backdrop-filter: blur(8px);
   transition: all 0.3s ease;
 }
+
 .stat-card:hover {
   transform: translateY(-5px);
 }
+
 .language-selector {
   position: relative;
 }
+
 .language-dropdown {
   position: absolute;
   top: 100%;
@@ -22,31 +35,45 @@
   min-width: 120px;
   z-index: 10;
 }
+
 .language-selector button[aria-expanded="true"] #languageArrow {
   transform: rotate(180deg);
 }
+
 .language-dropdown a.active {
   background-color: #f3f4f6;
-  color: #010510;
+  color: #1e40af;
   font-weight: 500;
 }
+
 .cta-button {
   background: linear-gradient(135deg, #f87171, #ef4444);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
+
 .cta-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
+
 .cta-button:active {
   transform: translateY(0);
 }
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 .animate-fadeIn {
   animation: fadeIn 0.8s ease forwards;
 }
