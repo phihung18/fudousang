@@ -1,79 +1,179 @@
-:where([class^="ri-"])::before {
-  content: "\f3c2";
-}
 
-.hero-section {
-  background-image: linear-gradient(to right, rgba(30, 64, 175, 0.9), rgba(59, 130, 246, 0.8)),
-    url('https://readdy.ai/api/search-image?query=modern%20office%20building%20with%20glass%20facade%2C%20blue%20sky%2C%20professional%20environment%2C%20corporate%20headquarters%2C%20clean%20design%2C%20minimalist%20architecture%2C%20high%20quality%20professional%20photo&width=1920&height=1080&seq=12345&orientation=landscape');
-  background-size: cover;
-  background-position: center;
-}
+    :where([class^="ri-"])::before {
+      content: "\f3c2";
+    }
 
-.text-primary {
-  --tw-text-opacity: 1;
-  color: rgb(20 21 26);
-  font-size: 2rem;
-}
+    .hero-section {
+      background-image: linear-gradient(to right, rgba(30, 64, 175, 0.9), rgba(59, 130, 246, 0.8)),
+        url('https://readdy.ai/api/search-image?query=modern%20office%20building%20with%20glass%20facade%2C%20blue%20sky%2C%20professional%20environment%2C%20corporate%20headquarters%2C%20clean%20design%2C%20minimalist%20architecture%2C%20high%20quality%20professional%20photo&width=1920&height=1080&seq=12345&orientation=landscape');
+      background-size: cover;
+      background-position: center;
+    }
 
-.stat-card {
-  backdrop-filter: blur(8px);
-  transition: all 0.3s ease;
-}
+    .text-primary {
+      --tw-text-opacity: 1;
+      color: rgb(20 21 26);
+      font-size: 2rem;
+    }
 
-.stat-card:hover {
-  transform: translateY(-5px);
-}
+    .stat-card {
+      backdrop-filter: blur(8px);
+      transition: all 0.3s ease;
+    }
 
-.language-selector {
-  position: relative;
-}
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
 
-.language-dropdown {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  min-width: 120px;
-  z-index: 10;
-}
+    .language-selector {
+      position: relative;
+    }
 
-.language-selector button[aria-expanded="true"] #languageArrow {
-  transform: rotate(180deg);
-}
+    .language-dropdown {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      min-width: 120px;
+      z-index: 10;
+    }
 
-.language-dropdown a.active {
-  background-color: #f3f4f6;
-  color: #1e40af;
-  font-weight: 500;
-}
+    .language-selector button[aria-expanded="true"] #languageArrow {
+      transform: rotate(180deg);
+    }
 
-.cta-button {
-  background: linear-gradient(135deg, #f87171, #ef4444);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
+    .language-dropdown a.active {
+      background-color: #f3f4f6;
+      color: #1e40af;
+      font-weight: 500;
+    }
 
-.cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
+    .cta-button {
+      background: linear-gradient(135deg, #f87171, #ef4444);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
 
-.cta-button:active {
-  transform: translateY(0);
-}
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+    .cta-button:active {
+      transform: translateY(0);
+    }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
 
-.animate-fadeIn {
-  animation: fadeIn 0.8s ease forwards;
-}
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fadeIn {
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    @media (max-width: 767px) {
+
+      .md\:flex,
+      .md\:block {
+        display: none !important;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .md\:flex {
+        display: flex !important;
+      }
+
+      .md\:block {
+        display: block !important;
+      }
+
+      .md\:hidden {
+        display: none !important;
+      }
+    }
+
+    .background {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .social-btn {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 8px 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 16px;
+      transition: background 0.2s;
+    }
+
+    .social-btn.facebook-btn {
+      color: #1877f3;
+      border-color: #1877f3;
+    }
+
+    .social-btn.mail-btn {
+      color: #ea4335;
+      border-color: #ea4335;
+    }
+
+    .social-btn:hover {
+      background: #f0f0f0;
+    }
+
+    .main-btn {
+      background: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 24px;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 0 8px;
+      transition: background 0.2s;
+    }
+
+    .main-btn:hover {
+      background: #388e3c;
+    }
+
+    .social-btn.social-btn-large {
+      font-size: 1.5rem;
+      padding: 18px 40px;
+      min-width: 200px;
+      justify-content: center;
+    }
+
+    .social-btn.facebook-btn {
+      color: #1877f3;
+      border-color: #1877f3;
+    }
+
+    .social-btn.mail-btn {
+      color: #ea4335;
+      border-color: #ea4335;
+    }
+
+    .social-btn.social-btn-medium {
+      font-size: 1.1rem;
+      padding: 10px 28px;
+      min-width: 140px;
+      justify-content: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    }
