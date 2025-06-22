@@ -1,1086 +1,1157 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-translate="page-title">CareEarth & GROWTEC - 住まい・仕事・サポートすべてここに</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
-    />
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: { primary: "#1e40af", secondary: "#3b82f6" },
-            borderRadius: {
-              none: "0px",
-              sm: "4px",
-              DEFAULT: "8px",
-              md: "12px",
-              lg: "16px",
-              xl: "20px",
-              "2xl": "24px",
-              "3xl": "32px",
-              full: "9999px",
-              button: "8px",
-            },
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-translate="page-title">CareEarth & GROWTEC - 住まい・仕事・サポートすべてここに</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: "#1e40af", secondary: "#3b82f6" },
+          borderRadius: {
+            none: "0px",
+            sm: "4px",
+            DEFAULT: "8px",
+            md: "12px",
+            lg: "16px",
+            xl: "20px",
+            "2xl": "24px",
+            "3xl": "32px",
+            full: "9999px",
+            button: "8px",
           },
         },
-      };
-    </script>
-    
-  </head>
-  <body class="font-sans bg-white">
-    <!-- Header -->
-    <header
-      class="w-full bg-white/90 backdrop-blur-sm fixed top-0 z-50 shadow-sm"
-    >
-      <div
-        class="container mx-auto px-4 py-4 flex justify-between items-center"
-      >
-        <div class="flex items-center space-x-6">
-          <div class="w-20 h-20 flex items-center justify-center">
-            <img
-              src="https://staff.careearth.info/application/files/4217/4977/2957/CareEarthrogo_2.png"
-               style= "width: 90px; height: auto;"
-              alt="CareEarth Logo"
-              class="w-18 h-18 object-contain"
-            />
-          </div>
-          <div class="w-20 h-20 flex items-center justify-center">
-            <img
-              src="https://static.readdy.ai/image/f4ed6560fe62b77c90a02ec2154d7352/3df76e4e339c858768788d7f6ab049bf.png"
-            style= "width: 63px; height: auto;" alt="GROWTEC Logo"
-              class="w-18 h-18 object-contain"
-            />
-          </div>
-          <h1 class="text-3xl md:text-4xl font-bold text-gray-700" data-translate="company-name" style="width: 200px;">
-            CareEarth <span class="text-primary" >&</span>
-            <span class="text-primary">GrowTec</span>
-          </h1>
+      },
+    };
+  </script>
+  
+</head>
+
+<body class="font-sans bg-white">
+  <!-- Header -->
+  <header class="w-full bg-white/90 backdrop-blur-sm fixed top-0 z-50 shadow-sm">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-6">
+        <div class="w-32 h-32 flex items-center justify-center">
+          <img src="https://staff.careearth.info/application/files/4217/4977/2957/CareEarthrogo_2.png"
+            style="width: 140px; height: auto;" alt="CareEarth Logo" class="w-32 h-32 object-contain" />
         </div>
-        <div class=" md:flex items-center space-x-8">
-          <nav>
-            <ul class="flex space-x-6">
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-700 hover:text-primary transition-colors"
-                  data-translate="home"
-                  >ホーム</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-700 hover:text-primary transition-colors"
-                  data-translate="property-search"
-                  >物件検索</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-700 hover:text-primary transition-colors"
-                  data-translate="services"
-                  >サービス</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.careearth.info/"
-                  class="text-gray-700 hover:text-primary transition-colors"
-                  data-translate="company-info"
-                  >会社情報</a
-                >
-              </li>
-              <li>
-            <a
-              href="#footer-contact"
-              class="text-gray-700 hover:text-primary transition-colors"
-              data-translate="contact"
-              >お問い合わせ</a
-            >
-          </li>
-            </ul>
-          </nav>
-          <div class="language-selector" id="languageSelector">
-            <button
-              class="flex items-center space-x-1 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-button text-gray-700"
-              aria-expanded="false"
-              aria-controls="languageDropdown"
-              id="languageButton"
-            >
-              <span>日本語</span>
-              <div
-                class="w-4 h-4 flex items-center justify-center transition-transform duration-200"
-                id="languageArrow"
-              >
-                <i class="ri-arrow-down-s-line"></i>
-              </div>
-            </button>
-            <div
-              id="languageDropdown"
-              class="language-dropdown bg-white shadow-lg rounded-md overflow-hidden hidden"
-            >
-              <a
-                href="#"
-                data-lang="en"
-                class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap"
-                >English</a
-              >
-              <a
-                href="#"
-                data-lang="vi"
-                class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap"
-                >Tiếng Việt</a
-              >
-              <a
-                href="#"
-                data-lang="ne"
-                class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap"
-                >नेपाली</a
-              >
-              <a
-                href="#"
-                data-lang="my"
-                class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap"
-                >မြန်မာ</a
-              >
-              <a
-                href="#"
-                data-lang="bn"
-                class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap"
-                >বাংলা</a
-              >
-              <a
-                href="#"
-                data-lang="zh"
-                class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap"
-                >中文</a
-              >
-              <a
-                href="#"
-                data-lang="ko"
-                class="block px-4 py-2 text-gray-700 hover:bg-gray-100 whitespace-nowrap"
-                >한국어</a
-              >
+        <div class="w-28 h-28 flex items-center justify-center">
+          <img
+            src="https://static.readdy.ai/image/f4ed6560fe62b77c90a02ec2154d7352/3df76e4e339c858768788d7f6ab049bf.png"
+            style="width: 100px; height: auto;" alt="GROWTEC Logo" class="w-28 h-28 object-contain" />
+        </div>
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-700" data-translate="company-name" style="width: 200px;">
+          CareEarth <span class="text-primary">&</span>
+          <span class="text-primary">GrowTec</span>
+        </h1>
+      </div>
+      <div class="flex flex-col items-center mx-8 gap-2">
+        <!-- Đã xóa nút Facebook và Email trên top -->
+      </div>
+      <div class="flex items-center space-x-8">
+        <nav>
+          <ul class="flex space-x-6">
+            <li>
+              <a href="#" class="text-gray-700 hover:text-primary transition-colors" data-translate="home">ホーム</a>
+            </li>
+            <li>
+              <a href="#airtable-section" class="text-gray-700 hover:text-primary transition-colors"
+                data-translate="property-search">物件検索</a>
+            </li>
+            <li>
+              <a href="#services" class="text-gray-700 hover:text-primary transition-colors"
+                data-translate="services">サービス</a>
+            </li>
+            <li>
+              <a href="https://www.careearth.info/" class="text-gray-700 hover:text-primary transition-colors"
+                data-translate="company-info">会社情報</a>
+            </li>
+            <li>
+              <a href="#footer-contact" class="text-gray-700 hover:text-primary transition-colors"
+                data-translate="contact">お問い合わせ</a>
+            </li>
+          </ul>
+          <ul class="flex space-x-6 mt-4">
+            <li>
+              <a href="#" data-lang="ja" id="lang-ja" class="text-gray-700 hover:text-primary transition-colors">日本語</a>
+            </li>
+            <li>
+              <a href="#" data-lang="en" id="lang-en" class="text-gray-700 hover:text-primary transition-colors">English</a>
+            </li>
+            <li>
+              <a href="#" data-lang="vi" id="lang-vi" class="text-gray-700 hover:text-primary transition-colors">Tiếng Việt</a>
+            </li>
+            <li>
+              <a href="#" data-lang="ne" id="lang-ne" class="text-gray-700 hover:text-primary transition-colors">नेपाली</a>
+            </li>
+            <li>
+              <a href="#" data-lang="my" class="text-gray-700 hover:text-primary transition-colors">မြန်မာ</a>
+            </li>
+            <li>
+              <a href="#" data-lang="bn" class="text-gray-700 hover:text-primary transition-colors">বাংলা</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="language-selector ml-4" id="languageSelector">
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero-section w-full min-h-screen pt-28 flex items-center relative">
+    <video id="heroVideo" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+      <source src="nihongo.mp4" type="video/mp4">
+    </video>
+    <div class="container mx-auto px-4 py-16 relative z-10">
+      <div class="max-w-5xl mx-auto text-center animate-fadeIn" style="animation-delay: 0.2s;">
+        <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+          data-translate="hero-title">
+          <span1 style="font-size:3rem; color:#fff ">住まい・仕事・サポート</span1><br />
+          <span style="font-size:3rem;color:#fff "> すべてここに</span>
+        </h2>
+        <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto" data-translate="hero-desc">
+          CAREEARTH &
+          GROWTECは、あなたの生活と仕事をトータルサポートする総合プラットフォームです。最適な住まい探しから、キャリアサポート、生活に必要なあらゆるサービスをワンストップで提供します。
+        </p>
+        <!-- Stats Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <!-- Stat 1 -->
+          <div class="stat-card bg-blue-100/20 rounded-lg p-6 text-blue-900 border border-blue-400 animate-fadeIn"
+            style="animation-delay: 0.4s;">
+            <div class="w-12 h-12 flex items-center justify-center mx-auto mb-4 bg-blue-400 rounded-full">
+              <span style="font-size:2rem;">🏠</span>
             </div>
+            <h3 class="text-white font-bold mb-5" id="tokuten1-title">特典①：家具・家電・Wi-Fiすべて完備！</h3>
+            <p class="text-white text-base mb-2" id="tokuten1-desc">引っ越したその日からすぐに快適な生活をスタートできます。</p>
+            <ul class="text-white text-base list-disc pl-5 space-y-1" id="tokuten1-list">
+              <li>冷蔵庫・洗濯機・電子レンジなど主要家電を完備</li>
+              <li>テーブルやベッドなど基本家具付き</li>
+              <li>高速インターネット（Wi-Fi）環境も整っています</li>
+            </ul>
+          </div>
+          <!-- 特典② -->
+          <div class="stat-card bg-yellow-100/20 rounded-lg p-6 text-yellow-900 border border-yellow-400 animate-fadeIn"
+            style="animation-delay: 0.6s;">
+            <div class="w-12 h-12 flex items-center justify-center mx-auto mb-4 bg-yellow-400 rounded-full">
+              <span style="font-size:2rem;">🎁</span>
+            </div>
+            <h3 class="text-white font-bold mb-2" id="tokuten2-title">特典②：5000円分のキャッシュプレゼント！</h3>
+            <p class="text-white text-base" id="tokuten2-desc">契約完了後、現金5000円をプレゼントいたします。<br>初期費用のサポートとしてご利用いただけます。</p>
+          </div>
+          <!-- Stat 3 -->
+          <div class="stat-card bg-green-100/20 rounded-lg p-6 text-gray-900 border border-green-400 animate-fadeIn"
+            style="animation-delay: 0.8s;">
+            <div class="w-12 h-12 flex items-center justify-center mx-auto mb-4 bg-green-400 rounded-full">
+              <span style="font-size:2rem;">🌍</span>
+            </div>
+            <h3 class="text-white font-bold mb-2 text-green-700" id="tokuten3-title">特典③：多言語サポートで外国籍の方も安心！</h3>
+            <p class="text-base mb-2 text-white" id="tokuten3-desc">当社では、英語・ベトナム語・ミャンマー語・ネパール語・バングラデシュ語など、様々な言語に対応可能です。<br>外国人の方でも安心してご相談・ご契約いただけます。</p>
           </div>
         </div>
-        <div class="md:hidden">
-          <button
-            class="w-10 h-10 flex items-center justify-center text-gray-700"
-          >
-            <i class="ri-menu-line ri-lg"></i>
+        <!-- CTA Button -->
+        <a href="#airtable-section"
+          class="cta-button inline-flex items-center justify-center space-x-2 px-8 py-4 text-xl font-semibold text-white rounded-button shadow-lg animate-fadeIn"
+          style="animation-delay: 1s;">
+          <span data-translate="search-properties">物件を探す</span>
+          <div class="w-6 h-6 flex items-center justify-center">
+            <i class="ri-search-line"></i>
+          </div>
+        </a>
+        <div class="flex justify-center items-center mt-8 gap-4 hidden md:flex">
+          <!-- Nút Facebook bên trái -->
+          <button class="social-btn facebook-btn social-btn-large" onclick="window.open('https://facebook.com','_blank')">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width:24px;height:24px;vertical-align:middle;"> Facebook
+          </button>
+          <!-- Nút Mail bên phải -->
+          <button class="social-btn mail-btn social-btn-large" onclick="window.location.href='mailto:yourmail@example.com'">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Mail" style="width:24px;height:24px;vertical-align:middle;"> Mail
           </button>
         </div>
+        <div class="background">
+          <!-- Đã xóa các nút Facebook, Tìm nhà, Mail ở giữa -->
+        </div>
       </div>
-    </header>
-    <!-- Hero Section -->
-    <section class="hero-section w-full min-h-screen pt-28 flex items-center">
-      <div class="container mx-auto px-4 py-16">
+    </div>
+  </section>
+  <!-- Services Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-translate="our-services">
+          私たちのサービス
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-translate="services-desc">
+          あなたの生活と仕事をより良くするための包括的なサービスを提供しています
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Service 1 -->
         <div
-          class="max-w-5xl mx-auto text-center animate-fadeIn"
-          style="animation-delay: 0.2s;"
-        >
-          <h2
-            class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
-            data-translate="hero-title"
-          >
-             <span style="font-size:3rem; color:#fff ">住まい・仕事・サポート</span><br />
-             <span style="font-size:3rem;color:#fff "> すべてここに</span>
-          </h2>
-          <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto" data-translate="hero-desc">
-            CareEarth &
-            GROWTECは、あなたの生活と仕事をトータルサポートする総合プラットフォームです。最適な住まい探しから、キャリアサポート、生活に必要なあらゆるサービスをワンストップで提供します。
-          </p>
-          <!-- Stats Section -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <!-- Stat 1 -->
-            <div
-              class="stat-card bg-white/10 rounded-lg p-6 text-white border border-white/20 animate-fadeIn"
-              style="animation-delay: 0.4s;"
-            >
-              <div
-                class="w-12 h-12 flex items-center justify-center mx-auto mb-4 bg-white/20 rounded-full"
-              >
-                <i class="ri-medal-line ri-xl"></i>
-              </div>
-              <h3 class="text-5xl font-bold mb-2">No.1</h3>
-              <p class="text-white/80" data-translate="stat-first-visit">初回来訪率</p>
+          class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="https://readdy.ai/api/search-image?query=modern%20japanese%20apartment%20interior%2C%20minimalist%20design%2C%20clean%20lines%2C%20natural%20light%2C%20wooden%20elements%2C%20cozy%20living%20space%2C%20high%20quality%20professional%20photo&width=600&height=400&seq=12346&orientation=landscape"
+              alt="住まい探し" class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-6">
+            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4">
+              <i class="ri-home-line ri-xl"></i>
             </div>
-            <!-- Stat 2 -->
-            <div
-              class="stat-card bg-white/10 rounded-lg p-6 text-white border border-white/20 animate-fadeIn"
-              style="animation-delay: 0.6s;"
-            >
-              <div
-                class="w-12 h-12 flex items-center justify-center mx-auto mb-4 bg-white/20 rounded-full"
-              >
-                <i class="ri-building-line ri-xl"></i>
+            <h3 class="text-xl font-bold text-gray-800 mb-2" data-translate="housing">住まい探し</h3>
+            <p class="text-gray-600 mb-4" data-translate="housing-desc">
+              あなたのライフスタイルに合った最適な住まいをご提案。賃貸から購入まで、幅広い選択肢からお選びいただけます。
+            </p>
+            <a href="#" class="inline-flex items-center text-primary hover:underline">
+              <span data-translate="details">詳細を見る</span>
+              <div class="w-5 h-5 flex items-center justify-center ml-1">
+                <i class="ri-arrow-right-line"></i>
               </div>
-              <h3 class="text-5xl font-bold mb-2">10万+</h3>
-              <p class="text-white/80" data-translate="stat-properties">物件情報</p>
+            </a>
+          </div>
+        </div>
+        <!-- Service 2 -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="https://readdy.ai/api/search-image?query=professional%20japanese%20office%20environment%2C%20modern%20workspace%2C%20collaborative%20area%2C%20business%20meeting%2C%20corporate%20setting%2C%20high%20quality%20professional%20photo&width=600&height=400&seq=12347&orientation=landscape"
+              alt="仕事サポート" class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-6">
+            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4">
+              <i class="ri-briefcase-line ri-xl"></i>
             </div>
-            <!-- Stat 3 -->
-            <div
-              class="stat-card bg-white/10 rounded-lg p-6 text-white border border-white/20 animate-fadeIn"
-              style="animation-delay: 0.8s;"
-            >
-              <div
-                class="w-12 h-12 flex items-center justify-center mx-auto mb-4 bg-white/20 rounded-full"
-              >
-                <i class="ri-emotion-happy-line ri-xl"></i>
+            <h3 class="text-xl font-bold mb-2" data-translate="work-support">仕事サポート</h3>
+            <p class="text-gray-600 mb-4" data-translate="work-support-desc">
+              キャリアアドバイスから求人紹介、スキルアップ支援まで、あなたの仕事に関するあらゆるニーズにお応えします。
+            </p>
+            <a href="https://staff.careearth.info/job-web"
+              class="inline-flex items-center text-primary hover:underline">
+              <span data-translate="details">詳細を見る</span>
+              <div class="w-5 h-5 flex items-center justify-center ml-1">
+                <i class="ri-arrow-right-line"></i>
               </div>
-              <h3 class="text-5xl font-bold mb-2">98%</h3>
-              <p class="text-white/80" data-translate="stat-satisfaction">顧客満足度</p>
+            </a>
+          </div>
+        </div>
+        <!-- Service 3 -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="https://readdy.ai/api/search-image?query=japanese%20lifestyle%20support%20services%2C%20community%20assistance%2C%20daily%20life%20help%2C%20support%20network%2C%20diverse%20group%20of%20people%20helping%20each%20other%2C%20high%20quality%20professional%20photo&width=600&height=400&seq=12348&orientation=landscape"
+              alt="生活サポート" class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-6">
+            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4">
+              <i class="ri-heart-line ri-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2" data-translate="life-support">生活サポート</h3>
+            <p class="text-gray-600 mb-4" data-translate="life-support-desc">
+              日常生活のあらゆる場面でのサポートを提供。引越し、保険、各種手続きなど、面倒な作業をお手伝いします。
+            </p>
+            <a href="#" class="inline-flex items-center text-primary hover:underline">
+              <span data-translate="details">詳細を見る</span>
+              <div class="w-5 h-5 flex items-center justify-center ml-1">
+                <i class="ri-arrow-right-line"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Service 4 -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="https://readdy.ai/api/search-image?query=modern%20sim%20card%20with%20digital%20technology%20elements%2C%20floating%20in%20space%20with%20glowing%20circuit%20patterns%2C%20clean%20minimalist%20design%2C%20professional%20product%20photography%20on%20white%20background%2C%20high%20quality%20commercial%20photo&width=600&height=400&seq=12349&orientation=landscape"
+              alt="SIMカード" class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="p-6">
+            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4">
+              <i class="ri-sim-card-line ri-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2" data-translate="sim-card">
+              SIMカード
+            </h3>
+            <p class="text-gray-600 mb-4" data-translate="sim-card-desc">
+              手軽で便利な通信サービスを提供。来日後すぐにインターネットに接続できる、お得なSIMカードプランをご用意しています。
+            </p>
+            <a href="https://lp.careearth-mobile.com/" class="inline-flex items-center text-primary hover:underline">
+              <span data-translate="details">詳細を見る</span>
+              <div class="w-5 h-5 flex items-center justify-center ml-1">
+                <i class="ri-arrow-right-line"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Featured Properties Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16" id="airtable-section">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-translate="featured-properties">
+          おすすめ物件
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-translate="featured-desc">
+          厳選された高品質な物件をご紹介します
+        </p>
+      </div>
+      <div class="relative min-h-[500px]">
+        <div id="loading" class="absolute inset-0 flex items-center justify-center bg-white">
+          <div class="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+        </div>
+        <iframe class="airtable-embed" src="https://airtable.com/embed/appzIKoV5eoLxZsDW/shryJSDuPwfPvIgLe"
+          frameborder="0" onmousewheel="" width="100%" height="1500" style="background: transparent; border: none;"
+          onload="hideLoading()" title="Property search results"></iframe>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-translate="testimonials">
+          お客様の声
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-translate="testimonials-desc">
+          サービスをご利用いただいたお客様からの声をご紹介します
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="flex items-center mb-4">
+            <div class="text-amber-400 flex">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
             </div>
           </div>
-          <!-- CTA Button -->
-          <a
-            href="#airtable-section"
-            class="cta-button inline-flex items-center justify-center space-x-2 px-8 py-4 text-xl font-semibold text-white rounded-button shadow-lg animate-fadeIn"
-            style="animation-delay: 1s;"
-          >
-            <span data-translate="search-properties">物件を探す</span>
-            <div class="w-6 h-6 flex items-center justify-center">
-              <i class="ri-search-line"></i>
+          <p class="text-gray-600 mb-6" data-translate="testimonial-1">
+            「希望条件にぴったりの物件を紹介していただき、とても満足しています。担当者の方の親身な対応も素晴らしかったです。おかげで理想の住まいに出会えました。」
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+              <i class="ri-user-line ri-lg text-gray-500"></i>
             </div>
+            <div>
+              <h4 class="font-medium text-gray-800">佐藤 美咲</h4>
+              <p class="text-sm text-gray-500">東京都在住 / 32歳</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="flex items-center mb-4">
+            <div class="text-amber-400 flex">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-6" data-translate="testimonial-2">
+            「転職活動と引越しを同時に行う必要があり、とても不安でしたが、CareEarth
+            &
+            GROWTECさんのトータルサポートのおかげで、スムーズに新生活をスタートすることができました。」
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+              <i class="ri-user-line ri-lg text-gray-500"></i>
+            </div>
+            <div>
+              <h4 class="font-medium text-gray-800">田中 健太</h4>
+              <p class="text-sm text-gray-500">大阪府在住 / 28歳</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="flex items-center mb-4">
+            <div class="text-amber-400 flex">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-half-fill"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-6" data-translate="testimonial-3">
+            「初めての一人暮らしで不安だらけでしたが、物件探しから契約手続き、引越しのサポートまで丁寧に対応していただき、安心して新生活を始めることができました。」
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+              <i class="ri-user-line ri-lg text-gray-500"></i>
+            </div>
+            <div>
+              <h4 class="font-medium text-gray-800">山田 優子</h4>
+              <p class="text-sm text-gray-500">福岡県在住 / 24歳</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CTA Section -->
+  <section class="py-20 bg-primary/10">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-1/2 p-8 md:p-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4" data-translate="start-ideal-life">
+              あなたの理想の生活を<br />始めましょう
+            </h2>
+            <p class="text-gray-600 mb-6" data-translate="cta-desc">
+              あなたのニーズに合わせたカスタマイズされたサービスを提供します。まずは無料相談からお気軽にどうぞ。
+            </p>
+            <a href="#contact-section"
+              class="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors text-lg font-medium whitespace-nowrap">
+              <span data-translate="book-consultation">無料相談を予約する</span>
+              <div class="w-5 h-5 flex items-center justify-center ml-2">
+                <i class="ri-calendar-line"></i>
+              </div>
+            </a>
+            <div class="flex flex-row mt-4 space-x-2">
+              <a href="https://www.facebook.com/groups/969024698438334/?hoisted_section_header_type=recently_seen&multi_permalinks=983755210298616"
+                class="inline-flex items-center justify-center px-3 py-1.5 bg-blue-600 text-white rounded-button hover:bg-blue-700 transition-colors text-sm font-medium whitespace-nowrap"
+                style="width: 100px; font-size: 0.95rem;">
+                <span>Facebook</span>
+                <div class="w-4 h-4 flex items-center justify-center ml-2">
+                  <i class="ri-facebook-fill"></i>
+                </div>
+              </a>
+              <a href="mailto:rent.your.ideal.home@growtec.info"
+                class="inline-flex items-center justify-center px-3 py-1.5 bg-gray-600 text-white rounded-button hover:bg-gray-700 transition-colors text-sm font-medium whitespace-nowrap"
+                style="width: 100px; font-size: 0.95rem;">
+                <span>Email</span>
+                <div class="w-4 h-4 flex items-center justify-center ml-2">
+                  <i class="ri-mail-fill"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <img
+              src="https://readdy.ai/api/search-image?query=happy%20japanese%20family%20or%20couple%20in%20new%20home%2C%20moving%20in%2C%20celebration%2C%20joyful%20moment%2C%20lifestyle%2C%20high%20quality%20professional%20photo&width=600&height=500&seq=12352&orientation=portrait"
+              alt="新生活" class="w-full h-full object-cover object-top" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div class="flex items-center space-x-2 mb-6">
+            <div class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full">
+              <img
+                src="https://static.readdy.ai/image/f4ed6560fe62b77c90a02ec2154d7352/dc2823d7ec9dc58e6aa59a1029a1558d.png"
+                alt="CareEarth Logo" class="w-6 h-6 object-contain" />
+            </div>
+            <h3 class="text-xl font-bold" data-translate="footer-about">CareEarth & GROWTEC</h3>
+          </div>
+          <p class="text-gray-400 mb-6">
+            あなたの生活と仕事をトータルサポートする総合プラットフォーム
+          </p>
+          <div class="flex space-x-4">
+            <a href="#"
+              class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="#"
+              class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors">
+              <i class="ri-twitter-x-fill"></i>
+            </a>
+            <a href="#"
+              class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors">
+              <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="#"
+              class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors">
+              <i class="ri-youtube-fill"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-6" data-translate="footer-services">サービス</h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors"
+                data-translate="property-search">物件検索</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">賃貸物件</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">売買物件</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">求人情報</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors"
+                data-translate="life-support">生活サポート</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">引越しサービス</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-6" data-translate="footer-company">会社情報</h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">会社概要</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">企業理念</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">スタッフ紹介</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">採用情報</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors"
+                data-translate="privacy-policy">プライバシーポリシー</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors" data-translate="terms">利用規約</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 id="footer-contact" class="text-lg font-bold mb-6" data-translate="footer-contact">お問い合わせ</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <div class="w-5 h-5 flex items-center justify-center mr-2 mt-1">
+                <i class="ri-map-pin-line"></i>
+              </div>
+              <span class="text-gray-400">〒540-0026 <br />大阪府大阪市中央区内本町２丁目４−１２<br />中央内本町ビル 3F</span>
+            </li>
+            <li class="flex items-center">
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-phone-line"></i>
+              </div>
+              <span class="text-gray-400">06-6867-7957</span>
+            </li>
+            <li class="flex items-center">
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-mail-line"></i>
+              </div>
+              <span class="text-gray-400">rent.your.ideal.home@growtec.info</span>
+            </li>
+            <li class="flex items-center">
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-facebook-fill"></i>
+              </div><a
+                href="https://www.facebook.com/groups/969024698438334/?hoisted_section_header_type=recently_seen&multi_permalinks=983755210298616">
+                <span class="text-gray-400">FaceBook</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-gray-700 mb-8" />
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm mb-4 md:mb-0">
+          © 2025 CareEarth & Growtec. All rights reserved.
+        </p>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm"
+            data-translate="privacy-policy">プライバシーポリシー</a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm" data-translate="terms">利用規約</a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm"
+            data-translate="sitemap">サイトマップ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Hamburger menu button for mobile -->
+  <button id="mobileMenuButton"
+    class="fixed top-6 right-6 z-50 block md:hidden w-10 h-10 flex items-center justify-center text-gray-700 bg-white rounded-full shadow"
+    aria-label="Open menu">
+    <i class="ri-menu-line ri-lg"></i>
+  </button>
+  <!-- Mobile Menu Overlay -->
+  <div id="mobileMenuOverlay" class="fixed inset-0 z-50 bg-black bg-opacity-50 hidden md:hidden">
+    <div class="fixed top-0 right-0 w-4/5 max-w-xs h-full bg-white shadow-lg flex flex-col">
+      <div class="flex items-center justify-between px-4 py-4 border-b">
+        <span class="font-bold text-lg">Menu</span>
+        <button id="mobileMenuClose" class="text-2xl"><i class="ri-close-line"></i></button>
+      </div>
+      <nav class="flex-1 overflow-y-auto">
+        <ul class="py-4">
+          <li><a href="#" class="block px-6 py-3 text-gray-700 text-lg" data-translate="home">ホーム</a></li>
+          <li><a href="#airtable-section" class="block px-6 py-3 text-gray-700 text-lg"
+              data-translate="property-search">物件検索</a></li>
+          <li><a href="#services" class="block px-6 py-3 text-gray-700 text-lg" data-translate="services">サービス</a></li>
+          <li><a href="https://www.careearth.info/" class="block px-6 py-3 text-gray-700 text-lg"
+              data-translate="company-info">会社情報</a></li>
+          <li><a href="#footer-contact" class="block px-6 py-3 text-gray-700 text-lg"
+              data-translate="contact">お問い合わせ</a></li>
+        </ul>
+        <div class="flex flex-col items-center gap-2 px-6 pb-2">
+          <a href="https://www.facebook.com/groups/969024698438334/?hoisted_section_header_type=recently_seen&multi_permalinks=983755210298616"
+            class="inline-flex items-center justify-center px-3 py-1.5 bg-blue-600 text-white rounded-button hover:bg-blue-700 transition-colors text-sm font-medium whitespace-nowrap tracking-wide font-semibold shadow-sm w-28 mb-1">
+            <span style="margin-right: 0.3em;">Facebook</span>
+            <i class="ri-facebook-fill"></i>
+          </a>
+          <a href="mailto:rent.your.ideal.home@growtec.info"
+            class="inline-flex items-center justify-center px-3 py-1.5 bg-gray-600 text-white rounded-button hover:bg-gray-700 transition-colors text-sm font-medium whitespace-nowrap tracking-wide font-semibold shadow-sm w-28">
+            <span style="margin-right: 0.3em;">Email</span>
+            <i class="ri-mail-fill"></i>
           </a>
         </div>
-      </div>
-    </section>
-    <!-- Services Section -->
-    <section class="py-20 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-translate="our-services">
-            私たちのサービス
-          </h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-translate="services-desc">
-            あなたの生活と仕事をより良くするための包括的なサービスを提供しています
-          </p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Service 1 -->
-          <div
-            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2"
-          >
-            <div class="h-48 overflow-hidden">
-              <img
-                src="https://readdy.ai/api/search-image?query=modern%20japanese%20apartment%20interior%2C%20minimalist%20design%2C%20clean%20lines%2C%20natural%20light%2C%20wooden%20elements%2C%20cozy%20living%20space%2C%20high%20quality%20professional%20photo&width=600&height=400&seq=12346&orientation=landscape"
-                alt="住まい探し"
-                class="w-full h-full object-cover object-top"
-              />
-            </div>
-            <div class="p-6">
-              <div
-                class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4"
-              >
-                <i class="ri-home-line ri-xl"></i>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2" data-translate="housing">住まい探し</h3>
-              <p class="text-gray-600 mb-4" data-translate="housing-desc">
-                あなたのライフスタイルに合った最適な住まいをご提案。賃貸から購入まで、幅広い選択肢からお選びいただけます。
-              </p>
-              <a
-                href="#"
-                class="inline-flex items-center text-primary hover:underline"
-              >
-                <span data-translate="details">詳細を見る</span>
-                <div class="w-5 h-5 flex items-center justify-center ml-1">
-                  <i class="ri-arrow-right-line"></i>
-                </div>
-              </a>
-            </div>
-          </div>
-          <!-- Service 2 -->
-          <div
-            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2"
-          >
-            <div class="h-48 overflow-hidden">
-              <img
-                src="https://readdy.ai/api/search-image?query=professional%20japanese%20office%20environment%2C%20modern%20workspace%2C%20collaborative%20area%2C%20business%20meeting%2C%20corporate%20setting%2C%20high%20quality%20professional%20photo&width=600&height=400&seq=12347&orientation=landscape"
-                alt="仕事サポート"
-                class="w-full h-full object-cover object-top"
-              />
-            </div>
-            <div class="p-6">
-              <div
-                class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4"
-              >
-                <i class="ri-briefcase-line ri-xl"></i>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2" data-translate="work-support">仕事サポート</h3>
-              <p class="text-gray-600 mb-4" data-translate="work-support-desc">
-                キャリアアドバイスから求人紹介、スキルアップ支援まで、あなたの仕事に関するあらゆるニーズにお応えします。
-              </p>
-              <a
-                href="https://staff.careearth.info/job-web"
-                class="inline-flex items-center text-primary hover:underline"
-              >
-                <span data-translate="details">詳細を見る</span>
-                <div class="w-5 h-5 flex items-center justify-center ml-1">
-                  <i class="ri-arrow-right-line"></i>
-                </div>
-              </a>
-            </div>
-          </div>
-          <!-- Service 3 -->
-          <div
-            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2"
-          >
-            <div class="h-48 overflow-hidden">
-              <img
-                src="https://readdy.ai/api/search-image?query=japanese%20lifestyle%20support%20services%2C%20community%20assistance%2C%20daily%20life%20help%2C%20support%20network%2C%20diverse%20group%20of%20people%20helping%20each%20other%2C%20high%20quality%20professional%20photo&width=600&height=400&seq=12348&orientation=landscape"
-                alt="生活サポート"
-                class="w-full h-full object-cover object-top"
-              />
-            </div>
-            <div class="p-6">
-              <div
-                class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4"
-              >
-                <i class="ri-heart-line ri-xl"></i>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2" data-translate="life-support">生活サポート</h3>
-              <p class="text-gray-600 mb-4" data-translate="life-support-desc">
-                日常生活のあらゆる場面でのサポートを提供。引越し、保険、各種手続きなど、面倒な作業をお手伝いします。
-              </p>
-              <a
-                href="#"
-                class="inline-flex items-center text-primary hover:underline"
-              >
-                <span data-translate="details">詳細を見る</span>
-                <div class="w-5 h-5 flex items-center justify-center ml-1">
-                  <i class="ri-arrow-right-line"></i>
-                </div>
-              </a>
-            </div>
-          </div>
-          <!-- Service 4 -->
-          <div
-            class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2"
-          >
-            <div class="h-48 overflow-hidden">
-              <img
-                src="https://readdy.ai/api/search-image?query=modern%20sim%20card%20with%20digital%20technology%20elements%2C%20floating%20in%20space%20with%20glowing%20circuit%20patterns%2C%20clean%20minimalist%20design%2C%20professional%20product%20photography%20on%20white%20background%2C%20high%20quality%20commercial%20photo&width=600&height=400&seq=12349&orientation=landscape"
-                alt="SIMカード"
-                class="w-full h-full object-cover object-top"
-              />
-            </div>
-            <div class="p-6">
-              <div
-                class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4"
-              >
-                <i class="ri-sim-card-line ri-xl"></i>
-              </div>
-              <h3
-                class="text-xl font-bold text-gray-800 mb-2"
-                data-translate="sim-card"
-              >
-                SIMカード
-              </h3>
-              <p class="text-gray-600 mb-4" data-translate="sim-card-desc">
-                手軽で便利な通信サービスを提供。来日後すぐにインターネットに接続できる、お得なSIMカードプランをご用意しています。
-              </p>
-              <a
-                href="https://lp.careearth-mobile.com/"
-                class="inline-flex items-center text-primary hover:underline"
-              >
-                <span data-translate="details">詳細を見る</span>
-                <div class="w-5 h-5 flex items-center justify-center ml-1">
-                  <i class="ri-arrow-right-line"></i>
-                </div>
-              </a>
+        <div class="px-6 pb-6">
+          <div class="language-selector w-full" id="mobileLanguageSelector">
+            <div class="font-semibold mb-2">Ngôn ngữ / Language</div>
+            <div class="flex flex-col gap-2">
+              <a href="#" data-lang="ja" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">日本語</a>
+              <a href="#" data-lang="en" id="lang-en-mobile" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">English</a>
+              <a href="#" data-lang="vi" id="lang-vi-mobile" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">Tiếng Việt</a>
+              <a href="#" data-lang="ne" id="lang-ne-mobile" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">ネパール語</a>
+              <a href="#" data-lang="my" id="lang-my-mobile" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">ミャンマー語</a>
+              <a href="#" data-lang="bn" id="lang-bn-mobile" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">ベンガル語</a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Featured Properties Section -->
-    <section class="py-20 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16" id="airtable-section">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-translate="featured-properties">
-            おすすめ物件
-          </h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-translate="featured-desc">
-            厳選された高品質な物件をご紹介します
-          </p>
-        </div>
-        <div class="relative min-h-[500px]">
-          <div
-            id="loading"
-            class="absolute inset-0 flex items-center justify-center bg-white"
-          >
-            <div
-              class="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"
-            ></div>
-          </div>
-          <iframe
-            class="airtable-embed"
-            src="https://airtable.com/embed/appzIKoV5eoLxZsDW/shryJSDuPwfPvIgLe"
-            frameborder="0"
-            onmousewheel=""
-            width="100%"
-            height="1500"
-            style="background: transparent; border: none;"
-            onload="hideLoading()"
-            title="Property search results"
-          ></iframe>
-        </div>
-      </div>
-    </section>
-    <!-- Testimonials Section -->
-    <section class="py-20 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-translate="testimonials">
-            お客様の声
-          </h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-translate="testimonials-desc">
-            サービスをご利用いただいたお客様からの声をご紹介します
-          </p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Testimonial 1 -->
-          <div class="bg-white rounded-lg shadow-md p-6">
-            <div class="flex items-center mb-4">
-              <div class="text-amber-400 flex">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-              </div>
-            </div>
-            <p class="text-gray-600 mb-6" data-translate="testimonial-1">
-              「希望条件にぴったりの物件を紹介していただき、とても満足しています。担当者の方の親身な対応も素晴らしかったです。おかげで理想の住まいに出会えました。」
-            </p>
-            <div class="flex items-center">
-              <div
-                class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4"
-              >
-                <i class="ri-user-line ri-lg text-gray-500"></i>
-              </div>
-              <div>
-                <h4 class="font-medium text-gray-800">佐藤 美咲</h4>
-                <p class="text-sm text-gray-500">東京都在住 / 32歳</p>
-              </div>
-            </div>
-          </div>
-          <!-- Testimonial 2 -->
-          <div class="bg-white rounded-lg shadow-md p-6">
-            <div class="flex items-center mb-4">
-              <div class="text-amber-400 flex">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-              </div>
-            </div>
-            <p class="text-gray-600 mb-6" data-translate="testimonial-2">
-              「転職活動と引越しを同時に行う必要があり、とても不安でしたが、CareEarth
-              &
-              GROWTECさんのトータルサポートのおかげで、スムーズに新生活をスタートすることができました。」
-            </p>
-            <div class="flex items-center">
-              <div
-                class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4"
-              >
-                <i class="ri-user-line ri-lg text-gray-500"></i>
-              </div>
-              <div>
-                <h4 class="font-medium text-gray-800">田中 健太</h4>
-                <p class="text-sm text-gray-500">大阪府在住 / 28歳</p>
-              </div>
-            </div>
-          </div>
-          <!-- Testimonial 3 -->
-          <div class="bg-white rounded-lg shadow-md p-6">
-            <div class="flex items-center mb-4">
-              <div class="text-amber-400 flex">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-half-fill"></i>
-              </div>
-            </div>
-            <p class="text-gray-600 mb-6" data-translate="testimonial-3">
-              「初めての一人暮らしで不安だらけでしたが、物件探しから契約手続き、引越しのサポートまで丁寧に対応していただき、安心して新生活を始めることができました。」
-            </p>
-            <div class="flex items-center">
-              <div
-                class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4"
-              >
-                <i class="ri-user-line ri-lg text-gray-500"></i>
-              </div>
-              <div>
-                <h4 class="font-medium text-gray-800">山田 優子</h4>
-                <p class="text-sm text-gray-500">福岡県在住 / 24歳</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- CTA Section -->
-    <section class="py-20 bg-primary/10">
-      <div class="container mx-auto px-4">
-        <div
-          class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden"
-        >
-          <div class="flex flex-col md:flex-row">
-            <div class="md:w-1/2 p-8 md:p-12">
-              <h2 class="text-3xl font-bold text-gray-800 mb-4" data-translate="start-ideal-life">
-                あなたの理想の生活を<br />始めましょう
-              </h2>
-              <p class="text-gray-600 mb-6" data-translate="cta-desc">
-                あなたのニーズに合わせたカスタマイズされたサービスを提供します。まずは無料相談からお気軽にどうぞ。
-              </p>
-              <a
-                href="#"
-                class="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors text-lg font-medium whitespace-nowrap"
-              >
-                <span data-translate="book-consultation">無料相談を予約する</span>
-                <div class="w-5 h-5 flex items-center justify-center ml-2">
-                  <i class="ri-calendar-line"></i>
-                </div>
-              </a>
-            </div>
-            <div class="md:w-1/2">
-              <img
-                src="https://readdy.ai/api/search-image?query=happy%20japanese%20family%20or%20couple%20in%20new%20home%2C%20moving%20in%2C%20celebration%2C%20joyful%20moment%2C%20lifestyle%2C%20high%20quality%20professional%20photo&width=600&height=500&seq=12352&orientation=portrait"
-                alt="新生活"
-                class="w-full h-full object-cover object-top"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white pt-16 pb-8">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div>
-            <div class="flex items-center space-x-2 mb-6">
-              <div
-                class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full"
-              >
-                <img
-                  src="https://static.readdy.ai/image/f4ed6560fe62b77c90a02ec2154d7352/dc2823d7ec9dc58e6aa59a1029a1558d.png"
-                  alt="CareEarth Logo"
-                  class="w-6 h-6 object-contain"
-                />
-              </div>
-              <h3 class="text-xl font-bold" data-translate="footer-about">CareEarth & GROWTEC</h3>
-            </div>
-            <p class="text-gray-400 mb-6">
-              あなたの生活と仕事をトータルサポートする総合プラットフォーム
-            </p>
-            <div class="flex space-x-4">
-              <a
-                href="#"
-                class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors"
-              >
-                <i class="ri-facebook-fill"></i>
-              </a>
-              <a
-                href="#"
-                class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors"
-              >
-                <i class="ri-twitter-x-fill"></i>
-              </a>
-              <a
-                href="#"
-                class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors"
-              >
-                <i class="ri-instagram-fill"></i>
-              </a>
-              <a
-                href="#"
-                class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors"
-              >
-                <i class="ri-youtube-fill"></i>
-              </a>
-            </div>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold mb-6" data-translate="footer-services">サービス</h3>
-            <ul class="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  data-translate="property-search"
-                  >物件検索</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >賃貸物件</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >売買物件</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >求人情報</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  data-translate="life-support"
-                  >生活サポート</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >引越しサービス</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold mb-6" data-translate="footer-company">会社情報</h3>
-            <ul class="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >会社概要</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >企業理念</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >スタッフ紹介</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >採用情報</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  data-translate="privacy-policy"
-                  >プライバシーポリシー</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  data-translate="terms"
-                  >利用規約</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 id="footer-contact" class="text-lg font-bold mb-6" data-translate="footer-contact">お問い合わせ</h3>
-            <ul class="space-y-3">
-              <li class="flex items-start">
-                <div class="w-5 h-5 flex items-center justify-center mr-2 mt-1">
-                  <i class="ri-map-pin-line"></i>
-                </div>
-                <span class="text-gray-400"
-                  >〒540-0026 <br />大阪府大阪市中央区内本町２丁目４−１２<br />中央内本町ビル 3F</span
-                >
-              </li>
-              <li class="flex items-center">
-                <div class="w-5 h-5 flex items-center justify-center mr-2">
-                  <i class="ri-phone-line"></i>
-                </div>
-                <span class="text-gray-400">06-6867-7957</span>
-              </li>
-              <li class="flex items-center">
-                <div class="w-5 h-5 flex items-center justify-center mr-2">
-                  <i class="ri-mail-line"></i>
-                </div>
-                <span class="text-gray-400">rent.your.ideal.home@growtec.info</span>
-              </li>
-              <li class="flex items-center">
-                <div class="w-5 h-5 flex items-center justify-center mr-2">
-                  <i class="ri-facebook-fill"></i>
-                </div><a href="https://www.facebook.com/groups/969024698438334/?hoisted_section_header_type=recently_seen&multi_permalinks=983755210298616">
-                <span class="text-gray-400">FaceBook</span></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <hr class="border-gray-700 mb-8" />
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <p class="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2025 CareEarth & Growtec. All rights reserved.
-          </p>
-          <div class="flex space-x-6">
-            <a
-              href="#"
-              class="text-gray-400 hover:text-white transition-colors text-sm"
-              data-translate="privacy-policy"
-              >プライバシーポリシー</a
-            >
-            <a
-              href="#"
-              class="text-gray-400 hover:text-white transition-colors text-sm"
-              data-translate="terms"
-              >利用規約</a
-            >
-            <a
-              href="#"
-              class="text-gray-400 hover:text-white transition-colors text-sm"
-              data-translate="sitemap"
-              >サイトマップ</a
-            >
-          </div>
-        </div>
-      </div>
-    </footer>
+      </nav>
+    </div>
+  </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const languageSelector = document.getElementById('languageSelector');
-        const languageButton = document.getElementById('languageButton');
-        const languageDropdown = document.getElementById('languageDropdown');
-
-        function toggleDropdown() {
-          const isExpanded = languageButton.getAttribute('aria-expanded') === 'true';
-          languageButton.setAttribute('aria-expanded', !isExpanded);
-          languageDropdown.classList.toggle('hidden');
-        }
-
-        function closeDropdown() {
-          languageButton.setAttribute('aria-expanded', 'false');
-          languageDropdown.classList.add('hidden');
-        }
-
-        function translatePage(lang) {
-          const elements = document.querySelectorAll('[data-translate]');
-          elements.forEach(element => {
-            const key = element.getAttribute('data-translate');
-            if (translations[lang] && translations[lang][key]) {
-              if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.placeholder = translations[lang][key];
-              } else if (element.tagName === 'TITLE') {
-                element.textContent = translations[lang][key] || 'CareEarth & GROWTEC';
-              } else {
-                element.textContent = translations[lang][key];
-              }
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Hàm dịch trang
+      function translatePage(lang) {
+        const elements = document.querySelectorAll('[data-translate]');
+        elements.forEach(element => {
+          const key = element.getAttribute('data-translate');
+          if (translations[lang] && translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+              element.placeholder = translations[lang][key];
+            } else if (element.tagName === 'TITLE') {
+              element.textContent = translations[lang][key] || 'CareEarth & GROWTEC';
+            } else {
+              element.textContent = translations[lang][key];
             }
-          });
-          // Cập nhật tiêu đề trang
-          document.title = translations[lang]['page-title'] || 'CareEarth & GROWTEC - Housing, Work, Support';
-        }
-
-        if (languageSelector && languageButton && languageDropdown) {
-          const links = languageDropdown.querySelectorAll('a');
-          links.forEach(link => {
-            link.addEventListener('click', function(e) {
-              e.preventDefault();
-              const lang = this.getAttribute('data-lang');
-              if (lang) {
-                links.forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
-                translatePage(lang);
-                languageButton.querySelector('span').textContent = this.textContent;
-                closeDropdown();
-              }
-            });
-          });
-
-          languageButton.addEventListener('click', function(e) {
-            e.stopPropagation();
-            toggleDropdown();
-          });
-
-          document.addEventListener('click', function(e) {
-            if (!languageSelector.contains(e.target)) {
-              closeDropdown();
-            }
-          });
-
-          // Set initial active state
-          const currentLang = 'ja'; // Default language
-          const currentLink = languageDropdown.querySelector(`[data-lang="${currentLang}"]`);
-          if (currentLink) {
-            currentLink.classList.add('active');
-            translatePage(currentLang);
           }
-        }
+        });
+        document.title = translations[lang]['page-title'] || 'CareEarth & GROWTEC - Housing, Work, Support';
+      }
+
+      // Gắn sự kiện click cho tất cả các nút chọn ngôn ngữ (header + mobile)
+      var langLinks = document.querySelectorAll('a[data-lang]');
+      var heroVideo = document.getElementById('heroVideo');
+      langLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          var lang = this.getAttribute('data-lang');
+          if (lang && translations[lang]) {
+            langLinks.forEach(function(l) { l.classList.remove('active'); });
+            this.classList.add('active');
+            translatePage(lang);
+            // Đổi video nền khi chọn tiếng Việt, tiếng Anh hoặc tiếng Myanmar
+            if (heroVideo) {
+              if (lang === 'vi') {
+                heroVideo.querySelector('source').setAttribute('src', 'vietnam.mp4');
+                heroVideo.load();
+              } else if (lang === 'en') {
+                heroVideo.querySelector('source').setAttribute('src', 'english.mp4');
+                heroVideo.load();
+              } else if (lang === 'my') {
+                heroVideo.querySelector('source').setAttribute('src', 'myanmar.mp4');
+                heroVideo.load();
+                } else if (lang === 'ne') {
+                heroVideo.querySelector('source').setAttribute('src', 'nepal video.mp4');
+                heroVideo.load();
+                 } else if (lang === 'bn') {
+                heroVideo.querySelector('source').setAttribute('src', 'banglades.mp4');
+                heroVideo.load();
+              } else {
+                heroVideo.querySelector('source').setAttribute('src', 'nihongo.mp4'); // video mặc định
+                heroVideo.load();
+              }
+            }
+          }
+        });
       });
 
-      const translations = {
-        'en': {
-          'page-title': 'CareEarth & GROWTEC - Housing, Work, Support',
-          'company-name': 'CareEarth & GROWTEC',
-          'home': 'Home',
-          'property-search': 'Property Search',
-          'services': 'Services',
-          'company-info': 'Company Info',
-          'contact': 'Contact',
-          'hero-title': 'Housing - Work - Support\nAll in One',
-          'hero-desc': 'CareEarth & GROWTEC is a comprehensive platform supporting your life and work. We provide all services from finding suitable housing to career support and life services.',
-          'stat-first-visit': 'First Visit Rate',
-          'stat-properties': 'Properties Listed',
-          'stat-satisfaction': 'Customer Satisfaction',
-          'search-properties': 'Search Properties',
-          'our-services': 'Our Services',
-          'services-desc': 'We provide comprehensive services to improve your life and work',
-          'housing': 'Housing',
-          'housing-desc': 'We recommend the perfect home suited to your lifestyle. Choose from a wide range of options, from rentals to purchases.',
-          'work-support': 'Work Support',
-          'work-support-desc': 'We meet all your work-related needs, from career advice and job placement to skill development support.',
-          'life-support': 'Life Support',
-          'life-support-desc': 'We offer support in every aspect of daily life, including moving, insurance, and various procedures to ease your burdens.',
-          'sim-card': 'SIM Card',
-          'sim-card-desc': 'Providing convenient communication services. We offer affordable SIM card plans that allow you to connect to the internet immediately after arriving in Japan.',
-          'details': 'View Details',
-          'featured-properties': 'Featured Properties',
-          'featured-desc': 'We present carefully selected high-quality properties',
-          'testimonials': 'Testimonials',
-          'testimonials-desc': 'Hear from customers who have used our services',
-          'testimonial-1': '“I am very satisfied with the property that perfectly matched my requirements. The staff’s dedicated support was also excellent, and thanks to them, I found my ideal home.”',
-          'testimonial-2': '“I had to manage a job change and relocation at the same time, which was stressful, but thanks to CareEarth & GROWTEC’s total support, I was able to start my new life smoothly.”',
-          'testimonial-3': '“I was full of anxiety about living alone for the first time, but the support from property search to contract procedures and moving was handled with great care, allowing me to start my new life with peace of mind.”',
-          'start-ideal-life': 'Start Your Ideal Life',
-          'cta-desc': 'We offer customized services tailored to your needs. Start with a free consultation today.',
-          'book-consultation': 'Book a Consultation',
-          'footer-about': 'A comprehensive platform supporting your life and work',
-          'footer-services': 'Services',
-          'footer-company': 'Company',
-          'footer-contact': 'Contact',
-          'privacy-policy': 'Privacy Policy',
-          'terms': 'Terms of Use',
-          'sitemap': 'Sitemap'
-        },
-        'vi': {
-          'page-title': 'CareEarth & GROWTEC - Nhà ở, Việc làm, Hỗ trợ',
-          'company-name': 'CareEarth & GROWTEC',
-          'home': 'Trang chủ',
-          'property-search': 'Tìm kiếm Bất động sản',
-          'services': 'Dịch vụ',
-          'company-info': 'Thông tin công ty',
-          'contact': 'Liên hệ',
-          'hero-title': 'Nhà ở - Việc làm - Hỗ trợ\nTất cả trong một',
-          'hero-desc': 'CareEarth & GROWTEC là nền tảng tổng hợp hỗ trợ cuộc sống và công việc của bạn. Chúng tôi cung cấp mọi dịch vụ từ tìm nhà ở phù hợp đến hỗ trợ nghề nghiệp và các dịch vụ sinh hoạt.',
-          'stat-first-visit': 'Tỷ lệ ghé thăm lần đầu',
-          'stat-properties': 'Thông tin Bất động sản',
-          'stat-satisfaction': 'Mức độ hài lòng của khách hàng',
-          'search-properties': 'Tìm Bất động sản',
-          'our-services': 'Dịch vụ của chúng tôi',
-          'services-desc': 'Chúng tôi cung cấp dịch vụ toàn diện để cải thiện cuộc sống và công việc của bạn',
-          'housing': 'Nhà ở',
-          'housing-desc': 'Chúng tôi đề xuất ngôi nhà hoàn hảo phù hợp với phong cách sống của bạn. Chọn từ nhiều lựa chọn, từ thuê đến mua.',
-          'work-support': 'Hỗ trợ việc làm',
-          'work-support-desc': 'Chúng tôi đáp ứng mọi nhu cầu liên quan đến công việc của bạn, từ tư vấn nghề nghiệp, giới thiệu việc làm đến hỗ trợ phát triển kỹ năng.',
-          'life-support': 'Hỗ trợ sinh hoạt',
-          'life-support-desc': 'Chúng tôi cung cấp hỗ trợ trong mọi khía cạnh của cuộc sống hàng ngày, bao gồm chuyển nhà, bảo hiểm và các thủ tục khác để giảm bớt gánh nặng.',
-          'sim-card': 'Thẻ SIM',
-          'sim-card-desc': 'Cung cấp dịch vụ viễn thông thuận tiện. Chúng tôi cung cấp các gói cước SIM giá rẻ giúp bạn kết nối internet ngay sau khi đến Nhật.',
-          'details': 'Xem chi tiết',
-          'featured-properties': 'Bất động sản nổi bật',
-          'featured-desc': 'Chúng tôi giới thiệu các bất động sản chất lượng cao được chọn lọc kỹ lưỡng',
-          'testimonials': 'Đánh giá',
-          'testimonials-desc': 'Lắng nghe ý kiến từ khách hàng đã sử dụng dịch vụ của chúng tôi',
-          'testimonial-1': '“Tôi rất hài lòng với bất động sản phù hợp hoàn toàn với yêu cầu của mình. Sự hỗ trợ tận tâm của nhân viên cũng rất tuyệt vời, nhờ đó tôi đã tìm được ngôi nhà lý tưởng.”',
-          'testimonial-2': '“Tôi phải xử lý việc thay đổi công việc và di chuyển cùng lúc, điều này rất căng thẳng, nhưng nhờ sự hỗ trợ toàn diện của CareEarth & GROWTEC, tôi đã bắt đầu cuộc sống mới một cách suôn sẻ.”',
-          'testimonial-3': '“Tôi rất lo lắng khi sống một mình lần đầu tiên, nhưng sự hỗ trợ từ tìm nhà đến thủ tục hợp đồng và chuyển nhà được thực hiện rất chu đáo, giúp tôi bắt đầu cuộc sống mới với sự yên tâm.”',
-          'start-ideal-life': 'Bắt đầu cuộc sống lý tưởng',
-          'cta-desc': 'Chúng tôi cung cấp dịch vụ tùy chỉnh theo nhu cầu của bạn. Hãy bắt đầu với buổi tư vấn miễn phí ngay hôm nay.',
-          'book-consultation': 'Đặt lịch tư vấn',
-          'footer-about': 'Nền tảng tổng hợp hỗ trợ cuộc sống và công việc của bạn',
-          'footer-services': 'Dịch vụ',
-          'footer-company': 'Công ty',
-          'footer-contact': 'Liên hệ',
-          'privacy-policy': 'Chính sách bảo mật',
-          'terms': 'Điều khoản sử dụng',
-          'sitemap': 'Sơ đồ trang'
-        },
-        'ne': {
-          'page-title': 'CareEarth & GROWTEC - आवास, काम, समर्थन',
-          'company-name': 'CareEarth & GROWTEC',
-          'home': 'गृह',
-          'property-search': 'सम्पत्ति खोज',
-          'services': 'सेवाहरू',
-          'company-info': 'कम्पनी जानकारी',
-          'contact': 'सम्पर्क',
-          'hero-title': 'आवास - काम - समर्थन\nसबै एकमा',
-          'hero-desc': 'CareEarth & GROWTEC तपाईंको जीवन र काम समर्थन गर्ने एक व्यापक प्लेटफर्म हो। हामी उपयुक्त आवास खोज्नेदेखि क्यारियर समर्थन र जीवन सेवाहरूसम्म सबै सेवाहरू प्रदान गर्छौं।',
-          'stat-first-visit': 'प्रथम भ्रमण दर',
-          'stat-properties': 'संपत्ति सूची',
-          'stat-satisfaction': 'ग्राहक सन्तुष्टि',
-          'search-properties': 'सम्पत्ति खोज्नुहोस्',
-          'our-services': 'हाम्रा सेवाहरू',
-          'services-desc': 'हामी तपाईंको जीवन र काम सुधार गर्न व्यापक सेवाहरू प्रदान गर्छौं',
-          'housing': 'आवास',
-          'housing-desc': 'हामी तपाईंको जीवनशैलीसँग मेल खाने उत्तम घर सिफारिस गर्छौं। भाडाको घरदेखि किनबेचसम्मका विभिन्न विकल्पहरूबाट छान्न सक्नुहुन्छ।',
-          'work-support': 'काम समर्थन',
-          'work-support-desc': 'हामी तपाईंको कामसँग सम्बन्धित सबै आवश्यकताहरू पूरा गर्छौं, क्यारियर सल्लाह, रोजगारी सिफारिस र सीप विकास समर्थनदेखि।',
-          'life-support': 'जीवन समर्थन',
-          'life-support-desc': 'हामी दैनिक जीवनको हरेक पक्षमा समर्थन प्रदान गर्छौं, जस्तै सरेर जाने, बीमा र विभिन्न प्रक्रियाहरूले तपाईंको बोझ हल्का बनाउँछ।',
-          'sim-card': 'सिम कार्ड',
-          'sim-card-desc': 'सुविधाजनक संचार सेवाहरू प्रदान गर्दै। हामी जापान आइपुगेपछि तुरुन्तै इन्टरनेट जडान गर्न मिल्ने किफायती सिम कार्ड योजनाहरू प्रदान गर्छौं।',
-          'details': 'विवरण हेर्नुहोस्',
-          'featured-properties': 'विशेष सम्पत्तिहरू',
-          'featured-desc': 'हामीले छनोट गरेका उच्च गुणस्तरका सम्पत्तिहरू प्रस्तुत गर्छौं',
-          'testimonials': 'प्रशंसापत्रहरू',
-          'testimonials-desc': 'हाम्रा सेवाहरू प्रयोग गरेका ग्राहकहरूको कुरा सुन्नुहोस्',
-          'testimonial-1': '“मलाई मेरो आवश्यकतासँग पूर्ण रूपमा मिल्ने सम्पत्ति प्रस्तुत गरिएकोमा म धेरै सन्तुष्ट छु। कर्मचारीहरूको समर्पित समर्थन पनि उत्कृष्ट थियो, र उहाँहरूको कारणले मलाई मेरो आदर्श घर भेटियो।”',
-          'testimonial-2': '“मलाई काम परिवर्तन र स्थानान्तरण एकसाथ गर्नुपर्ने थियो, जुन तनावपूर्ण थियो, तर CareEarth & GROWTEC को पूर्ण समर्थनले मलाई नयाँ जीवन सुचारु रूपमा सुरु गर्न सकें।”',
-          'testimonial-3': '“म पहिलो पटक एक्लै बस्न डराएको थिएँ, तर घर खोज्ने देखि सम्झौता प्रक्रिया र सरेपछि सम्मको समर्थन निकै राम्रोसँग भएकोले म शान्त मनले नयाँ जीवन सुरु गर्न सकें।”',
-          'start-ideal-life': 'आफ्नो आदर्श जीवन सुरु गर्नुहोस्',
-          'cta-desc': 'हामी तपाईंको आवश्यकताअनुसार अनुकूलित सेवा प्रदान गर्छौं। आजै निःशुल्क परामर्शबाट सुरु गर्नुहोस्।',
-          'book-consultation': 'परामर्श बुक गर्नुहोस्',
-          'footer-about': 'तपाईंको जीवन र काम समर्थन गर्ने एक व्यापक प्लेटफर्म',
-          'footer-services': 'सेवाहरू',
-          'footer-company': 'कम्पनी',
-          'footer-contact': 'सम्पर्क',
-          'privacy-policy': 'गोपनीयता नीति',
-          'terms': 'प्रयोगका सर्तहरू',
-          'sitemap': 'साइटम्याप'
-        },
-        'my': {
-          'page-title': 'CareEarth & GROWTEC - အိမ်ရာ၊ အလုပ်၊ ပံ့ပိုးမှု',
-          'company-name': 'CareEarth & GROWTEC',
-          'home': 'ပင်မစာမျက်နှာ',
-          'property-search': 'အိမ်ခြံမေရှာဖွေရန်',
-          'services': 'ဝန်ဆောင်မှုများ',
-          'company-info': 'ကုမ္ပဏီအချက်အလက်',
-          'contact': 'ဆက်သွယ်ရန်',
-          'hero-title': 'နေအိမ် - အလုပ် - ပံ့ပိုးမှု\nအားလုံးတစ်ခုတည်းမှာ',
-          'hero-desc': 'CareEarth & GROWTEC သည် သင့်ဘဝနှင့် အလုပ်ကို ပံ့ပိုးပေးသော ပြည့်စုံသော platform တစ်ခုဖြစ်ပါသည်။ သင့်လျော်သော နေအိမ်ရှာဖွေခြင်းမှ အသက်မွေးဝမ်းကျောင်း ပံ့ပိုးမှုနှင့် ဘဝဝန်ဆောင်မှုများအထိ ဝန်ဆောင်မှုအားလုံးကို ကျွန်ုပ်တို့ ပေးအပ်ပါသည်။',
-          'stat-first-visit': 'ပထမဆုံးလာရောက်မှုနှုန်း',
-          'stat-properties': 'အိမ်ခြံမြေအချက်အလက်များ',
-          'stat-satisfaction': 'ဖောက်သည်ကျေနပ်မှုအဆင့်',
-          'search-properties': 'အိမ်ခြံမေရှာဖွေရန်',
-          'our-services': 'ကျွန်ုပ်တို့၏ ဝန်ဆောင်မှုများ',
-          'services-desc': 'သင့်ဘဝနှင့် အလုပ်ကို တိုးတက်စေရန် ပြည့်စုံသော ဝန်ဆောင်မှုများ ပေးအပ်ပါသည်',
-          'housing': 'နေအိမ်',
-          'housing-desc': 'သင့်ဘဝစရိုက်နှင့် ကိုက်ညီသော အိမ်ရာအကောင်းဆုံးကို အကြံပြုပါသည်။ ငှားရမ်းရန်မှ ဝယ်ယူရန်အထိ ရွေးချယ်စရာများစွာရှိပါသည်။',
-          'work-support': 'အလုပ်ပံ့ပိုးမှု',
-          'work-support-desc': 'ကမ္ဘာ့အလုပ်လုပ်ကိုင်မှုဆိုင်ရာ လိုအပ်ချက်အားလုံးကို ဖြည့်ဆည်းပေးပါသည်၊ ကမ္ဘာ့အလုပ်လုပ်ကိုင်မှုအကြံပြုချက်မှ အလုပ်အကောင်းဆုံးရွေးချယ်မှုနှင့် ကျွမ်းကျင်မှုဖွံ့ဖြိုးတိုးတက်ရေးအထိ။',
-          'life-support': 'ဘဝပံ့ပိုးမှု',
-          'life-support-desc': 'ကျွန်ုပ်တို့သည် နေ့စဉ်ဘဝ၏ အားလုံးတွင် ပံ့ပိုးမှုပေးပါသည်၊ လှုပ်ရှားခြင်း၊ အာမခံနှင့် အမျိုးမျိုးသော လုပ်ငန်းစဉ်များပါဝင်ပြီး သင့်အခက်အခဲများကို လျှော့ချပေးပါသည်။',
-          'sim-card': 'ဆင်းမ်ကတ်',
-          'sim-card-desc': 'အဆင်ပြေသော ဆက်သွယ်ရေးဝန်ဆောင်မှုများ ပေးအပ်ခြင်း။ ဂျပန်နိုင်ငံသို့ ရောက်ရှိပြီးချိန်းတွင် ချက်ချင်း အင်တာနက်ချိတ်ဆက်နိုင်သော စျေးသက်သာသည့် ဆင်းမ်ကတ် အစီအစဉ်များကို ကျွန်ုပ်တို့ ပေးအပ်ပါသည်။',
-          'details': 'အသေးစိတ်ကြည့်ရှုပါ',
-          'featured-properties': 'အထူးအိမ်ခြံမြေများ',
-          'featured-desc': 'ကျွန်ုပ်တို့ ရွေးချယ်ထားသော အရည်အသွေး မြင့်မားသော အိမ်ခြံမြေများကို မိတ်ဆက်ပေးပါသည်',
-          'testimonials': 'သုံးသပ်ချက်များ',
-          'testimonials-desc': 'ကျွန်ုပ်တို့၏ ဝန်ဆောင်မှုများ အသုံးပြုခဲ့သော ဖောက်သည်များထံမှ အသံများကို မိတ်ဆက်ပေးပါသည်',
-          'testimonial-1': '“ကျွန်မသည် ကျွန်မရဲ့ လိုအပ်ချက်များနှင့် ကိုက်ညီပြီး အိမ်ခြံမေကို မိတ်ဆက်ပေးခဲ့ပြီး အလွန်ကျေနပ်မိပါသည်။ တာဝန်ရှိသူများ၏ စိတ်အားထက်သန်စွာ ပံ့ပိုးမှုလည်း ထူးချွန်ခဲ့ပြီး ၎င်းတို့၏ ကူညီမှုကြောင့် ကျွန်မသည် အိမ်ရာအကောင်းဆုံးကို တွေ့ရှိခဲ့ပါသည်။”',
-          'testimonial-2': '“ကျွန်တော် အလုပ်ပြောင်းလဲမှုနှင့် လှုပ်ရှားမှုကို တပြိုင်နက် လုပ်ဆောင်ရန် လိုအပ်ခဲ့ပြီး ၎င်းသည် အလွန်စိုးရိမ်ဖွယ်ဖြစ်ခဲ့သော်လည်း CareEarth & GROWTEC ၏ အပြည့်အဝပံ့ပိုးမှုကြောင့် ကျွန်တော် အသက်မွေးဝမ်းကျောင်းအသစ်ကို ပြင်းပြင်းထန်ထန် စတင်နိုင်ခဲ့ပါသည်။”',
-          'testimonial-3': '“ကျွန်မအနေဖြင့် ပထမဆုံး တစ်ယောက်တည်း နေထိုင်ရန် အလွန်စိုးရိမ်ခဲ့သော်လည်း အိမ်ခြံရှာဖွေခြင်းမှ စပြီး စာချုပ်လုပ်ငန်းချစ်စပ်မှု၊ လှုပ်ရှားမှုအထိ အသေးစိတ် ပံ့ပိုးပေးခဲ့သောကြောင့် ကျွန်မသည် စိတ်ချရစွာ အသက်မွေးဝမ်းကျောင်းအသစ်ကို စတင်နိုင်ခဲ့သည်။”',
-          'start-ideal-life': 'သင့်စိတ်ကူးယဉ်ဘဝကို စတင်ပါ',
-          'cta-desc': 'ကျွန်ုပ်တို့သည် သင့်လိုအပ်ချက်များနှင့် ကိုက်ညီသော ပေးကွဲပြုပြင်ထားသော ဝန်ဆောင်မှုများ ပေးအပ်ပါသည်။ ပထမဆုံး အခမဲ့တိုင်ပင်ဆွေးနွေးမှုမှ အစပြုပါ။',
-          'book-consultation': 'တိုင်ပင်ဆွေးနွေးမှု ရက်ချိန်းယူရန်',
-          'footer-about': 'သင့်ဘဝနှင့် အလုပ်ကို ပံ့ပိုးပေးသော ပြည့်စုံသော platform',
-          'footer-services': 'ဝန်ဆောင်မှုများ',
-          'footer-company': 'ကုမ္ပဏီ',
-          'footer-contact': 'ဆက်သွယ်ရန်',
-          'privacy-policy': 'ကိုယ်ရေးကိုယ်တာ မူဝါဒ',
-          'terms': 'အသုံးပြုမှု စည်းမျဉ်းများ',
-          'sitemap': 'ဆိုက်မြေပုံ'
-        },
-        'bn': {
-          'page-title': 'CareEarth & GROWTEC - আবাসন, কাজ, সহায়তা',
-          'company-name': 'CareEarth & GROWTEC',
-          'home': 'হোম',
-          'property-search': 'প্রপার্টি অনুসন্ধান',
-          'services': 'সেবাসমূহ',
-          'company-info': 'কোম্পানির তথ্য',
-          'contact': 'যোগাযোগ',
-          'hero-title': 'আবাসন - কাজ - সহায়তা\nসব একসঙ্গে',
-          'hero-desc': 'CareEarth & GROWTEC আপনার জীবন ও কাজকে সমর্থন করা একটি বিস্তৃত প্ল্যাটফর্ম। আমরা উপযুক্ত আবাসন খুঁজে বের করা থেকে শুরু করে ক্যারিয়ার সমর্থন ও জীবন সেবা পর্যন্ত সব ধরনের সেবা প্রদান করি।',
-          'stat-first-visit': 'প্রথম পরিদর্শনের হার',
-          'stat-properties': 'প্রপার্টি তালিকা',
-          'stat-satisfaction': 'গ্রাহক সন্তুষ্টি',
-          'search-properties': 'প্রপার্টি খুঁজুন',
-          'our-services': 'আমাদের সেবাসমূহ',
-          'services-desc': 'আমরা আপনার জীবন ও কাজ উন্নত করার জন্য বিস্তৃত সেবা প্রদান করি',
-          'housing': 'আবাসন',
-          'housing-desc': 'আমরা আপনার জীবনশৈলীর সাথে মানানসই পারফেক্ট বাড়ি সুপারিশ করি। ভাড়া থেকে ক্রয় পর্যন্ত বিস্তৃত বিকল্প থেকে নির্বাচন করুন।',
-          'work-support': 'কাজের সহায়তা',
-          'work-support-desc': 'আমরা আপনার কাজের সব ধরনের প্রয়োজন পূরণ করি, ক্যারিয়ার পরামর্শ থেকে চাকরির সুযোগ এবং দক্ষতা উন্নয়ন সমর্থন পর্যন্ত।',
-          'life-support': 'জীবনের সহায়তা',
-          'life-support-desc': 'আমরা দৈনন্দিন জীবনের প্রতিটি দিকে সহায়তা প্রদান করি, যেমন স্থানান্তর, বীমা এবং বিভিন্ন প্রক্রিয়া যা আপনার বোঝা হালকা করে।',
-          'sim-card': 'সিম কার্ড',
-          'sim-card-desc': 'সুবিধাজনক যোগাযোগ সেবা প্রদান করা হয়। জাপানে আগমনের পর ত instantaneousড়ন্ত ইন্টারনেট সংযোগের জন্য আমরা সাশ্রয়ী মূল্যের সিম কার্ড পরিকল্পনা অফার করি।',
-          'details': 'বিস্তারিত দেখুন',
-          'featured-properties': 'বৈশিষ্ট্যযুক্ত প্রপার্টি',
-          'featured-desc': 'আমরা সযত্নে নির্বাচিত উচ্চমানের প্রপার্টি উপস্থাপন করি',
-          'testimonials': 'প্রশংসাপত্র',
-          'testimonials-desc': 'আমাদের সেবা ব্যবহারকারী গ্রাহকদের মতামত শোনুন',
-          'testimonial-1': '“আমি আমার প্রয়োজনীয়তার সাথে সম্পূর্ণ মিলে যাওয়া প্রপার্টি পেয়ে খুব সন্তুষ্ট। কর্মকর্তাদের নিবেদিত সমর্থনও অসাধারণ ছিল, এবং তাদের কারণে আমি আমার আদর্শ বাড়ি পেয়েছি।”',
-          'testimonial-2': '“আমাকে চাকরি পরিবর্তন এবং স্থানান্তর একসাথে পরিচালনা করতে হয়েছিল, যা চাপের ছিল, কিন্তু CareEarth & GROWTEC এর মোট সমর্থনের কারণে আমি আমার নতুন জীবন সুগমভাবে শুরু করতে পেরেছি।”',
-          'testimonial-3': '“প্রথমবার একা থাকার জন্য আমি উদ্বিগ্ন ছিলাম, কিন্তু প্রপার্টি অনুসন্ধান থেকে চুক্তি প্রক্রিয়া এবং স্থানান্তর পর্যন্ত সমর্থন খুব যত্নের সাথে পরিচালিত হয়েছে, যার ফলে আমি নতুন জীবন শান্ত মনে শুরু করতে পেরেছি।”',
-          'start-ideal-life': 'আপনার আদর্শ জীবন শুরু করুন',
-          'cta-desc': 'আমরা আপনার প্রয়োজন অনুযায়ী কাস্টমাইজড সেবা প্রদান করি। আজই বিনামূল্যে পরামর্শ থেকে শুরু করুন।',
-          'book-consultation': 'পরামর্শ বুক করুন',
-          'footer-about': 'আপনার জীবন ও কাজ সমর্থন করা একটি বিস্তৃত প্ল্যাটফর্ম',
-          'footer-services': 'সেবাসমূহ',
-          'footer-company': 'কোম্পানি',
-          'footer-contact': 'যোগাযোগ',
-          'privacy-policy': 'গোপনীয়তা নীতি',
-          'terms': 'ব্যবহারের শর্তাবলী',
-          'sitemap': 'সাইটম্যাপ'
-        }
-      };
+      // Mặc định dịch sang tiếng Nhật khi load trang
+      translatePage('ja');
 
-      // Mobile Menu
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuButton = document.querySelector(".md\\:hidden button");
-        if (menuButton) {
-          menuButton.addEventListener("click", function () {
-            alert("モバイルメニューが開きます");
-          });
-        }
-      });
+      // Mobile menu
+      var mobileMenuButton = document.getElementById('mobileMenuButton');
+      var mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      var mobileMenuClose = document.getElementById('mobileMenuClose');
+      if (mobileMenuButton && mobileMenuOverlay && mobileMenuClose) {
+        mobileMenuButton.addEventListener('click', function() {
+          mobileMenuOverlay.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        });
+        mobileMenuClose.addEventListener('click', function() {
+          mobileMenuOverlay.style.display = 'none';
+          document.body.style.overflow = '';
+        });
+        mobileMenuOverlay.addEventListener('click', function(e) {
+          if (e.target === mobileMenuOverlay) {
+            mobileMenuOverlay.style.display = 'none';
+            document.body.style.overflow = '';
+          }
+        });
+      }
 
       // Loading Handler
-      function hideLoading() {
+      window.hideLoading = function() {
         const loading = document.getElementById("loading");
         if (loading) {
           loading.style.display = "none";
         }
       }
-    </script>
-  </body>
+    });
+
+    // Thêm object translations cho tiếng Việt
+    const translations = {
+      ja: {
+        'page-title': 'CareEarth & GrowTec - 住まい・仕事・サポートすべてここに',
+        'company-name': 'CareEarth & GrowTec',
+        'home': 'ホーム',
+        'property-search': '物件検索',
+        'services': 'サービス',
+        'company-info': '会社情報',
+        'contact': 'お問い合わせ',
+        'hero-title': '住まい・仕事・サポート\nすべてここに',
+        'hero-desc': 'CareEarth & GrowTecは、あなたの生活と仕事をトータルサポートする総合プラットフォームです。最適な住まい探しから、キャリアサポート、生活に必要なあらゆるサービスをワンストップで提供します。',
+        'stat-first-visit': '初回来訪率',
+        'stat-properties': '物件情報',
+        'stat-satisfaction': '顧客満足度',
+        'search-properties': '物件を探す',
+        'our-services': '私たちのサービス',
+        'services-desc': 'あなたの生活と仕事をより良くするための包括的なサービスを提供しています',
+        'housing': '住まい探し',
+        'housing-desc': 'あなたのライフスタイルに合った最適な住まいをご提案。賃貸から購入まで、幅広い選択肢からお選びいただけます。',
+        'details': '詳細を見る',
+        'work-support': '仕事サポート',
+        'work-support-desc': 'キャリアアドバイスから求人紹介、スキルアップ支援まで、あなたの仕事に関するあらゆるニーズにお応えします。',
+        'life-support': '生活サポート',
+        'life-support-desc': '日常生活のあらゆる場面でのサポートを提供。引越し、保険、各種手続きなど、面倒な作業をお手伝いします。',
+        'featured-properties': 'おすすめ物件',
+        'featured-desc': '厳選された高品質な物件をご紹介します',
+        'testimonials': 'お客様の声',
+        'testimonials-desc': 'サービスをご利用いただいたお客様からの声をご紹介します',
+        'testimonial-1': '「希望条件にぴったりの物件を紹介していただき、とても満足しています。担当者の方の親身な対応も素晴らしかったです。おかげで理想の住まいに出会えました。」',
+        'testimonial-2': '「転職活動と引越しを同時に行う必要があり、とても不安でしたが、CareEarth & GROWTECさんのトータルサポートのおかげで、スムーズに新生活をスタートすることができました。」',
+        'testimonial-3': '「初めての一人暮らしで不安だらけでしたが、物件探しから契約手続き、引越しのサポートまで丁寧に対応していただき、安心して新生活を始めることができました。」',
+        'start-ideal-life': 'あなたの理想の生活を\n始めましょう',
+        'cta-desc': 'あなたのニーズに合わせたカスタマイズされたサービスを提供します。まずは無料相談からお気軽にどうぞ。',
+        'book-consultation': '無料相談を予約する',
+        'footer-about': 'CareEarth & GrowTec',
+        'footer-services': 'サービス',
+        'footer-company': '会社情報',
+        'footer-contact': 'お問い合わせ',
+        'privacy-policy': 'プライバシーポリシー',
+        'terms': '利用規約',
+        'sitemap': 'サイトマップ',
+      },
+      vi: {
+        'page-title': 'CareEarth & GrowTec - Nhà ở, Việc làm, Hỗ trợ tất cả tại đây',
+        'company-name': 'CareEarth & GrowTec',
+        'home': 'Trang chủ',
+        'property-search': 'Tìm kiếm nhà',
+        'services': 'Dịch vụ',
+        'company-info': 'Thông tin công ty',
+        'contact': 'Liên hệ',
+        'hero-title': 'Nhà ở, Việc làm, Hỗ trợ\nTất cả tại đây',
+        'hero-desc': 'CareEarth & GrowTec là nền tảng tổng hợp hỗ trợ toàn diện cho cuộc sống và công việc của bạn. Từ tìm kiếm nhà ở phù hợp, hỗ trợ sự nghiệp đến các dịch vụ thiết yếu, tất cả đều có tại đây.',
+        'stat-first-visit': 'Tỷ lệ khách lần đầu',
+        'stat-properties': 'Thông tin nhà ở',
+        'stat-satisfaction': 'Hài lòng khách hàng',
+        'search-properties': 'Tìm nhà',
+        'our-services': 'Dịch vụ của chúng tôi',
+        'services-desc': 'Chúng tôi cung cấp các dịch vụ toàn diện giúp cuộc sống và công việc của bạn tốt hơn',
+        'housing': 'Tìm nhà ở',
+        'housing-desc': 'Đề xuất nơi ở phù hợp với phong cách sống của bạn. Từ thuê đến mua, nhiều lựa chọn đa dạng.',
+        'details': 'Xem chi tiết',
+        'work-support': 'Hỗ trợ việc làm',
+        'work-support-desc': 'Tư vấn nghề nghiệp, giới thiệu việc làm, hỗ trợ nâng cao kỹ năng, đáp ứng mọi nhu cầu công việc của bạn.',
+        'life-support': 'Hỗ trợ cuộc sống',
+        'life-support-desc': 'Hỗ trợ mọi mặt trong cuộc sống hàng ngày: chuyển nhà, bảo hiểm, thủ tục... giúp bạn tiết kiệm thời gian.',
+        'sim-card': 'SIM Card',
+        'sim-card-desc': 'Cung cấp dịch vụ viễn thông tiện lợi. Có SIM giá tốt giúp bạn kết nối internet ngay khi đến Nhật.',
+        'featured-properties': 'Nhà nổi bật',
+        'featured-desc': 'Giới thiệu các căn nhà chất lượng cao được chọn lọc',
+        'testimonials': 'Khách hàng nói gì',
+        'testimonials-desc': 'Chia sẻ từ khách hàng đã sử dụng dịch vụ của chúng tôi',
+        'testimonial-1': '“Tôi rất hài lòng khi được giới thiệu căn nhà đúng như mong muốn. Nhân viên tư vấn rất tận tâm.”',
+        'testimonial-2': '“Nhờ sự hỗ trợ tổng thể của CareEarth & GROWTEC, tôi đã chuyển nhà và tìm việc mới rất suôn sẻ.”',
+        'testimonial-3': '“Lần đầu sống một mình, tôi rất lo lắng nhưng được hỗ trợ từ tìm nhà, ký hợp đồng đến chuyển nhà nên rất yên tâm.”',
+        'start-ideal-life': 'Bắt đầu cuộc sống lý tưởng của bạn',
+        'cta-desc': 'Chúng tôi cung cấp dịch vụ cá nhân hóa theo nhu cầu của bạn. Hãy đặt lịch tư vấn miễn phí ngay!',
+        'footer-about': 'CareEarth & GrowTec',
+        'footer-services': 'Dịch vụ',
+        'footer-company': 'Thông tin công ty',
+        'footer-contact': 'Liên hệ',
+        'privacy-policy': 'Chính sách bảo mật',
+        'terms': 'Điều khoản sử dụng',
+        'sitemap': 'Sơ đồ trang',
+      },
+      en: {
+        'page-title': 'CareEarth & GrowTec - Housing, Work, Support all here',
+        'company-name': 'CareEarth & GrowTec',
+        'home': 'Home',
+        'property-search': 'Property Search',
+        'services': 'Services',
+        'company-info': 'Company Info',
+        'contact': 'Contact',
+        'hero-title': 'Housing, Work, Support\nAll here',
+        'hero-desc': 'CareEarth & GrowTec is a comprehensive platform that fully supports your life and work. From finding the best housing, career support, to all essential services, all in one place.',
+        'stat-first-visit': 'First Visit Rate',
+        'stat-properties': 'Property Info',
+        'stat-satisfaction': 'Customer Satisfaction',
+        'search-properties': 'Search Properties',
+        'our-services': 'Our Services',
+        'services-desc': 'We provide comprehensive services to improve your life and work',
+        'housing': 'Find Housing',
+        'housing-desc': 'We propose the best housing to suit your lifestyle. From renting to buying, choose from a wide range of options.',
+        'details': 'See Details',
+        'work-support': 'Work Support',
+        'work-support-desc': 'From career advice, job introduction, to skill-up support, we meet all your work-related needs.',
+        'life-support': 'Life Support',
+        'life-support-desc': 'We provide support for all aspects of daily life: moving, insurance, procedures, and more.',
+        'sim-card': 'SIM Card',
+        'sim-card-desc': 'We offer convenient communication services. Get a great SIM plan to connect to the internet as soon as you arrive in Japan.',
+        'featured-properties': 'Featured Properties',
+        'featured-desc': 'Introducing carefully selected high-quality properties',
+        'testimonials': 'Customer Voices',
+        'testimonials-desc': 'Here are some voices from customers who have used our services',
+        'testimonial-1': '“I am very satisfied with the property introduced that perfectly matched my requirements. The staff was very attentive.”',
+        'testimonial-2': '“I had to change jobs and move at the same time, but thanks to CareEarth & GROWTEC’s total support, I was able to start my new life smoothly.”',
+        'testimonial-3': '“I was very anxious about living alone for the first time, but I was able to start my new life with peace of mind thanks to their thorough support from property search to contract and moving.”',
+        'testimonial-2': '“I had to change jobs and move at the same time, but thanks to CareEarth & GROWTEC’s total support, I was able to start my new life smoothly.”',
+        'testimonial-3': '“I was very anxious about living alone for the first time, but I was able to start my new life with peace of mind thanks to their thorough support from property search to contract and moving.”',
+        'start-ideal-life': 'Start Your Ideal Life',
+        'cta-desc': 'We provide customized services tailored to your needs. Please feel free to book a free consultation first!',
+        'book-consultation': 'Book Free Consultation',
+        'footer-about': 'CareEarth & GrowTec',
+        'footer-services': 'Services',
+        'footer-company': 'Company Info',
+        'footer-contact': 'Contact',
+        'privacy-policy': 'Privacy Policy',
+        'terms': 'Terms of Use',
+        'sitemap': 'Sitemap',
+      },
+      my: {
+        'page-title': 'CareEarth & GrowTec - အိမ်ခြံမြေ၊ အလုပ်အကိုင်၊ အထောက်အပံ့ အားလုံးတစ်နေရာတည်း',
+        'company-name': 'CareEarth & GrowTec',
+        'home': 'ပင်မစာမျက်နှာ',
+        'property-search': 'အိမ်ခြံမြေ ရှာဖွေမှု',
+        'services': 'ဝန်ဆောင်မှုများ',
+        'company-info': 'ကုမ္ပဏီအချက်အလက်',
+        'contact': 'ဆက်သွယ်ရန်',
+        'hero-title': 'အိမ်ခြံမြေ၊ အလုပ်အကိုင်၊ အထောက်အပံ့\nအားလုံးတစ်နေရာတည်း',
+        'hero-desc': 'CareEarth & GrowTec သည် သင့်ဘ ၀ နှင့် အလုပ်အကိုင်အတွက် အပြည့်အဝ ထောက်ပံ့ပေးသော စုစုပေါင်း ပလက်ဖောင်းတစ်ခုဖြစ်သည်။ သင့်အတွက် အကောင်းဆုံး အိမ်ခြံမြေရှာဖွေမှု၊ အလုပ်အကိုင်အထောက်အပံ့နှင့် လိုအပ်သော ဝန်ဆောင်မှုအားလုံးကို တစ်နေရာတည်းတွင် ရရှိနိုင်ပါသည်။',
+        'stat-first-visit': 'ပထမဆုံးလာရောက်မှုနှုန်း',
+        'stat-properties': 'အိမ်ခြံမြေ အချက်အလက်',
+        'stat-satisfaction': 'ဖောက်သည်ကျေနပ်မှု',
+        'search-properties': 'အိမ်ခြံမြေ ရှာဖွေရန်',
+        'our-services': 'ကျွန်ုပ်တို့၏ ဝန်ဆောင်မှုများ',
+        'services-desc': 'သင့်ဘ ၀ နှင့် အလုပ်အကိုင် ပိုမိုကောင်းမွန်စေရန် ကျွန်ုပ်တို့သည် စုံလင်သော ဝန်ဆောင်မှုများ ပေးသည်',
+        'housing': 'အိမ်ခြံမြေ ရှာဖွေမှု',
+        'housing-desc': 'သင့်ဘ ၀ စတိုင်နှင့် ကိုက်ညီသော အိမ်ခြံမြေများကို အကြံပြုပေးပါသည်။ ငှားရန်မှ ဝယ်ရန်အထိ ရွေးချယ်စရာများစွာရှိသည်။',
+        'details': 'အသေးစိတ်ကြည့်ရန်',
+        'work-support': 'အလုပ်အကိုင် အထောက်အပံ့',
+        'work-support-desc': 'အလုပ်အကိုင်အကြံပေးမှု၊ အလုပ်အကိုင်အကြောင်းအရာ မိတ်ဆက်မှု၊ ကျွမ်းကျင်မှုမြှင့်တင်မှုအထောက်အပံ့ စသည်ဖြင့် သင့်လိုအပ်ချက်အားလုံးကို ဖြည့်ဆည်းပေးသည်။',
+        'life-support': 'ဘ ၀ အထောက်အပံ့',
+        'life-support-desc': 'နေ့စဉ်ဘ ၀ အခက်အခဲများအတွက် အထောက်အပံ့ပေးသည်။ အိမ်ပြောင်းခြင်း၊ အာမခံ၊ လုပ်ထုံးလုပ်နည်းများ စသည်ဖြင့် အဆင်ပြေစေရန် ကူညီပေးသည်။',
+        'sim-card': 'SIM ကဒ်',
+        'sim-card-desc': 'အဆင်ပြေသော ဆက်သွယ်ရေး ဝန်ဆောင်မှုများပေးသည်။ ဂျပန်ရောက်ပြီးချိန်တွင် တစ်ခုပဲ SIM ကဒ်ဖြင့် အင်တာနက်သုံးနိုင်သည်။',
+        'featured-properties': 'အထူးအိမ်ခြံမြေများ',
+        'featured-desc': 'ရွေးချယ်ထားသော အရည်အသွေးမြင့် အိမ်ခြံမြေများကို မိတ်ဆက်ပေးသည်',
+        'testimonials': 'ဖောက်သည်တုံ့ပြန်ချက်များ',
+        'testimonials-desc': 'ကျွန်ုပ်တို့၏ ဝန်ဆောင်မှုကို အသုံးပြုခဲ့သော ဖောက်သည်များ၏ တုံ့ပြန်ချက်များ',
+        'testimonial-1': '“ကျွန်ုပ်လိုချင်သော အိမ်ခြံမြေကို တိတိကျကျ မိတ်ဆက်ပေးသည့်အတွက် အလွန်ကျေနပ်ပါသည်။ ဝန်ထမ်းများလည်း အလွန်ဂရုစိုက်မှုရှိသည်။”',
+        'testimonial-2': '“အလုပ်ပြောင်းခြင်းနှင့် အိမ်ပြောင်းခြင်းကို တစ်ပြိုင်နက်တည်း ပြုလုပ်ရသော်လည်း CareEarth & GROWTEC ၏ အပြည့်အဝ ထောက်ပံ့မှုကြောင့် ဘ ၀ အသစ်ကို အဆင်ပြေစွာ စတင်နိုင်ခဲ့သည်။”',
+        'testimonial-3': '“ပထမဆုံးတစ်ယောက်တည်းနေမည့်အတွက် စိတ်ပူနေခဲ့ပေမယ့် အိမ်ရှာခြင်း၊ စာချုပ်ချုပ်ခြင်း၊ အိမ်ပြောင်းခြင်းအထိ အားလုံးကို ကူညီပေးသဖြင့် စိတ်ချမ်းသာစွာ ဘ ၀ အသစ်ကို စတင်နိုင်ခဲ့သည်။”',
+        'start-ideal-life': 'သင့်အိပ်မက်ဘ ၀ ကို စတင်လိုက်ပါ',
+        'cta-desc': 'သင့်လိုအပ်ချက်နှင့် ကိုက်ညီသော ဝန်ဆောင်မှုများကို ပေးဆောင်ပါသည်။ အခမဲ့ အကြံပေးမှု ရယူရန် ဆက်သွယ်ပါ!',
+        'book-consultation': 'အခမဲ့ အကြံပေးမှု ရယူရန်',
+        'footer-about': 'CareEarth & GrowTec',
+        'footer-services': 'ဝန်ဆောင်မှုများ',
+        'footer-company': 'ကုမ္ပဏီအချက်အလက်',
+        'footer-contact': 'ဆက်သွယ်ရန်',
+        'privacy-policy': 'ကိုယ်ရေးအချက်အလက် ကာကွယ်ရေးမူဝါဒ',
+        'terms': 'အသုံးပြုခြင်း စည်းမျဉ်း',
+        'sitemap': 'ဆိုဒ်မြေပုံ',
+      },
+      ne: {
+        'page-title': 'CareEarth & GrowTec - घर, जागिर, सहयोग सबै यहाँ',
+        'company-name': 'CareEarth & GrowTec',
+        'home': 'गृहपृष्ठ',
+        'property-search': 'घर खोज्नुहोस्',
+        'services': 'सेवाहरू',
+        'company-info': 'कम्पनी जानकारी',
+        'contact': 'सम्पर्क',
+        'hero-title': 'घर, जागिर, सहयोग\nसबै यहाँ',
+        'hero-desc': 'CareEarth & GROWTEC तपाईंको जीवन र जागिरका लागि पूर्ण समर्थन गर्ने एकीकृत प्लेटफर्म हो। उपयुक्त घर खोजी, क्यारियर सहयोग, आवश्यक सबै सेवा एकै ठाउँमा उपलब्ध छ।',
+        'stat-first-visit': 'पहिलो आगन्तुक दर',
+        'stat-properties': 'घर जानकारी',
+        'stat-satisfaction': 'ग्राहक सन्तुष्टि',
+        'search-properties': 'घर खोज्नुहोस्',
+        'our-services': 'हाम्रो सेवाहरू',
+        'services-desc': 'हामी तपाईंको जीवन र जागिरलाई अझ राम्रो बनाउन समग्र सेवा प्रदान गर्छौं',
+        'housing': 'घर खोजी',
+        'housing-desc': 'तपाईंको जीवनशैली अनुसार उपयुक्त घर सिफारिस। भाडादेखि किन्ने सम्म, धेरै विकल्पहरू।',
+        'details': 'विवरण हेर्नुहोस्',
+        'work-support': 'जागिर सहयोग',
+        'work-support-desc': 'क्यारियर सल्लाह, जागिर सिफारिस, सीप विकास सहयोग, तपाईंका सबै आवश्यकता पूरा गर्छौं।',
+        'life-support': 'जीवन सहयोग',
+        'life-support-desc': 'दैनिक जीवनका सबै पक्षमा सहयोग। सर्ने, बीमा, प्रक्रिया आदि सजिलो बनाइदिन्छौं।',
+        'sim-card': 'सिम कार्ड',
+        'sim-card-desc': 'सजिलो सञ्चार सेवा। जापान आएपछि तुरुन्तै इन्टरनेट चलाउन सस्तो सिम कार्ड उपलब्ध।',
+        'featured-properties': 'विशेष घरहरू',
+        'featured-desc': 'छनोट गरिएका उत्कृष्ट घरहरू प्रस्तुत',
+        'testimonials': 'ग्राहक प्रतिक्रिया',
+        'testimonials-desc': 'हाम्रो सेवा लिएका ग्राहकका प्रतिक्रिया',
+        'testimonial-1': '“मेरो चाहनाअनुसारको घर सिफारिस पाउँदा धेरै खुसी लाग्यो। कर्मचारीको सहयोग पनि उत्कृष्ट थियो।”',
+        'testimonial-2': '“CareEarth & GrowTec को समग्र सहयोगले म सजिलै नयाँ जीवन सुरु गर्न सकेँ।”',
+        'testimonial-3': '“पहिलो पटक एक्लै बस्दा डर लागेको थियो, तर घर खोजी, सम्झौता, सर्ने सबैमा सहयोग पाएको छु।”',
+        'start-ideal-life': 'आफ्नो आदर्श जीवन सुरु गर्नुहोस्',
+        'cta-desc': 'हामी तपाईंको आवश्यकता अनुसार व्यक्तिगत सेवा दिन्छौं। निःशुल्क परामर्शका लागि सम्पर्क गर्नुहोस्!',
+        'footer-about': 'CareEarth & GrowTec',
+        'footer-services': 'सेवाहरू',
+        'footer-company': 'कम्पनी जानकारी',
+        'footer-contact': 'सम्पर्क',
+        'privacy-policy': 'गोपनीयता नीति',
+        'terms': 'प्रयोगका सर्तहरू',
+        'sitemap': 'साइट नक्सा',
+      },
+      bn: {
+        'page-title': 'CareEarth & GrowTec - বাসস্থান, চাকরি, সহায়তা সব এক জায়গায়',
+        'company-name': 'CareEarth & GrowTec',
+        'home': 'হোম',
+        'property-search': 'বাড়ি খোঁজ',
+        'services': 'সেবা',
+        'company-info': 'কোম্পানি তথ্য',
+        'contact': 'যোগাযোগ',
+        'hero-title': 'বাসস্থান, চাকরি, সহায়তা\nসব এক জায়গায়',
+        'hero-desc': 'CareEarth & GrowTec একটি সমন্বিত প্ল্যাটফর্ম, যা আপনার জীবন ও কাজের জন্য সম্পূর্ণ সহায়তা প্রদান করে। উপযুক্ত বাড়ি খোঁজা, ক্যারিয়ার সহায়তা এবং প্রয়োজনীয় সব সেবা এক জায়গায়।',
+        'stat-first-visit': 'প্রথমবার আগমন হার',
+        'stat-properties': 'বাড়ির তথ্য',
+        'stat-satisfaction': 'গ্রাহক সন্তুষ্টি',
+        'search-properties': 'বাড়ি খুঁজুন',
+        'our-services': 'আমাদের সেবা',
+        'services-desc': 'আপনার জীবন ও কাজ আরও ভালো করতে আমরা সমন্বিত সেবা প্রদান করি',
+        'housing': 'বাড়ি খোঁজা',
+        'housing-desc': 'আপনার জীবনধারার সাথে মানানসই বাড়ি সুপারিশ। ভাড়া থেকে কেনা পর্যন্ত, অনেক বিকল্প।',
+        'details': 'বিস্তারিত দেখুন',
+        'work-support': 'চাকরি সহায়তা',
+        'work-support-desc': 'ক্যারিয়ার পরামর্শ, চাকরি সুপারিশ, দক্ষতা উন্নয়ন সহায়তা, আপনার সব চাহিদা পূরণ করি।',
+        'life-support': 'জীবন সহায়তা',
+        'life-support-desc': 'দৈনন্দিন জীবনের সব ক্ষেত্রে সহায়তা। বাড়ি বদল, বীমা, বিভিন্ন প্রক্রিয়া সহজ করি।',
+        'sim-card': 'সহজ যোগাযোগ সেবা। জাপানে এসে সঙ্গে সঙ্গে ইন্টারনেট চালাতে সাশ্রয়ী সিম কার্ড।',
+        'featured-properties': 'বাছাইকৃত বাড়ি',
+        'featured-desc': 'নির্বাচিত উচ্চমানের বাড়ি উপস্থাপন',
+        'testimonials': 'গ্রাহক মতামত',
+        'testimonials-desc': 'আমাদের সেবা নেওয়া গ্রাহকদের মতামত',
+        'testimonial-1': '“আমার চাহিদা অনুযায়ী বাড়ি পেয়ে খুব খুশি। কর্মীদের সহায়তাও চমৎকার।”',
+        'testimonial-2': '“CareEarth & GrowTec-এর সমন্বিত সহায়তায় আমি সহজেই নতুন জীবন শুরু করতে পেরেছি।”',
+        'testimonial-3': '“প্রথমবার একা থাকার ভয় ছিল, কিন্তু বাড়ি খোঁজা, চুক্তি, বদল সবকিছুতে সহায়তা পেয়েছি।”',
+        'start-ideal-life': 'আপনার আদর্শ জীবন শুরু করুন',
+        'cta-desc': 'আমরা আপনার চাহিদা অনুযায়ী ব্যক্তিগতকৃত সেবা দিই। বিনামূল্যে পরামর্শের জন্য যোগাযোগ করুন!',
+        'footer-about': 'CareEarth & GrowTec',
+        'footer-services': 'সেবা',
+        'footer-company': 'কোম্পানি তথ্য',
+        'footer-contact': 'যোগাযোগ',
+        'privacy-policy': 'গোপনীয়তা নীতি',
+        'terms': 'ব্যবহারের শর্তাবলী',
+        'sitemap': 'সাইট ম্যাপ',
+      }
+    };
+
+    const tokutenTranslations = {
+  ja: {
+    tokuten1: {
+      title: '特典①：家具・家電・Wi-Fiすべて完備！',
+      desc: '引っ越したその日からすぐに快適な生活をスタートできます。',
+      list: [
+        '冷蔵庫・洗濯機・電子レンジなど主要家電を完備',
+        'テーブルやベッドなど基本家具付き',
+        '高速インターネット（Wi-Fi）環境も整っています'
+      ]
+    },
+    tokuten2: {
+      title: '特典②：5000円分のキャッシュプレゼント！',
+      desc: '契約完了後、現金5000円をプレゼントいたします。<br>初期費用のサポートとしてご利用いただけます。'
+    },
+    tokuten3: {
+      title: '特典③：多言語サポートで外国籍の方も安心！',
+      desc: '当社では、英語・ベトナム語・ミャンマー語・ネパール語・バングラデシュ語など、様々な言語に対応可能です。<br>外国人の方でも安心してご相談・ご契約いただけます。'
+    }
+  },
+  vi: {
+    tokuten1: {
+      title: 'Đặc quyền ①: Đầy đủ nội thất, thiết bị điện và Wi-Fi!',
+      desc: 'Bạn có thể bắt đầu cuộc sống tiện nghi ngay từ ngày chuyển đến.',
+      list: [
+        'Trang bị đầy đủ tủ lạnh, máy giặt, lò vi sóng...',
+        'Có sẵn bàn, giường và các đồ nội thất cơ bản',
+        'Mạng internet tốc độ cao (Wi-Fi) sẵn sàng'
+      ]
+    },
+    tokuten2: {
+      title: 'Đặc quyền ②: Tặng 5000 yên tiền mặt!',
+      desc: 'Sau khi hoàn tất hợp đồng, bạn sẽ nhận được 5000 yên tiền mặt.<br>Có thể sử dụng để hỗ trợ chi phí ban đầu.'
+    },
+    tokuten3: {
+      title: 'Đặc quyền ③: Hỗ trợ đa ngôn ngữ, người nước ngoài yên tâm!',
+      desc: 'Chúng tôi hỗ trợ nhiều ngôn ngữ như tiếng Anh, Việt, Myanmar, Nepal, Bangladesh...<br>Người nước ngoài cũng có thể yên tâm tư vấn và ký hợp đồng.'
+    }
+  },
+  en: {
+    tokuten1: {
+      title: 'Benefit 1: Fully furnished with appliances & Wi-Fi!',
+      desc: 'You can start a comfortable life from the day you move in.',
+      list: [
+        'Equipped with refrigerator, washing machine, microwave, etc.',
+        'Basic furniture such as table and bed included',
+        'High-speed internet (Wi-Fi) available'
+      ]
+    },
+    tokuten2: {
+      title: 'Benefit 2: 5000 yen cash present!',
+      desc: 'After completing the contract, you will receive 5000 yen in cash.<br>You can use it to support your initial costs.'
+    },
+    tokuten3: {
+      title: 'Benefit 3: Multilingual support for foreigners!',
+      desc: 'We support various languages such as English, Vietnamese, Myanmar, Nepali, Bangladeshi...<br>Foreigners can also consult and sign contracts with peace of mind.'
+    }
+  },
+  my: {
+    tokuten1: {
+      title: 'အထူးအခွင့်အရေး ၁: အိမ်ပစ္စည်း၊ လျှပ်စစ်ပစ္စည်း၊ Wi-Fi အားလုံးပါဝင်သည်!',
+      desc: 'ရွှေ့လာသောနေ့မှစ၍ ချက်ချင်းအဆင်ပြေစွာနေထိုင်နိုင်သည်။',
+      list: [
+        'ရေခဲသေတ္တာ၊ အဝတ်လျှော်စက်၊ မိုက်ခရိုဝေ့စက် စသည်တို့ပါဝင်သည်',
+        'စားပွဲ၊ အိပ်ရာ စသည့် အခြေခံအိမ်ပစ္စည်းများပါဝင်သည်',
+        'မြန်နှုန်းမြင့် အင်တာနက် (Wi-Fi) ရနိုင်သည်'
+      ]
+    },
+    tokuten2: {
+      title: 'အထူးအခွင့်အရေး ၂: ၅၀၀၀ ယန်း ငွေသားလက်ဆောင်!',
+      desc: 'စာချုပ်ပြီးဆုံးပါက ၅၀၀၀ ယန်း ငွေသားလက်ဆောင်ရရှိမည်။<br>စတင်အသုံးစရိတ်အတွက် အသုံးပြုနိုင်သည်။'
+    },
+    tokuten3: {
+      title: 'အထူးအခွင့်အရေး ၃: နိုင်ငံခြားသားများအတွက် ဘာသာစကားအထောက်အပံ့!',
+      desc: 'အင်္ဂလိပ်၊ ဗီယက်နမ်၊ မြန်မာ၊ နီပေါ၊ ဘင်္ဂလားဒေ့ရှ် စသည့် ဘာသာစကားများကို ထောက်ပံ့ပေးပါသည်။<br>နိုင်ငံခြားသားများလည်း ယုံကြည်စိတ်ချစွာ တိုင်ပင်စာချုပ်ချနိုင်သည်။'
+    }
+  },
+  ne: {
+    tokuten1: {
+      title: 'विशेषता १: सबै फर्निचर, उपकरण र Wi-Fi उपलब्ध!',
+      desc: 'सर्ने दिनदेखि नै सहज जीवन सुरु गर्न सक्नुहुन्छ।',
+      list: [
+        'फ्रिज, वाशिंग मेसिन, माइक्रोवेभ आदि उपलब्ध',
+        'टेबल, बेड लगायत आधारभूत फर्निचर',
+        'हाई-स्पीड इन्टरनेट (Wi-Fi) को सुविधा'
+      ]
+    },
+    tokuten2: {
+      title: 'विशेषता २: ५००० येन नगद उपहार!',
+      desc: 'सम्झौता सम्पन्न भएपछि ५००० येन नगद प्राप्त गर्नुहोस्।<br>सुरुवाती खर्चमा सहयोग गर्न सकिन्छ।'
+    },
+    tokuten3: {
+      title: 'विशेषता ३: विदेशीहरूका लागि बहुभाषिक सहायता!',
+      desc: 'हामी अंग्रेजी, भियतनामी, म्यानमार, नेपाली, बंगलादेशी आदि भाषाहरूमा सहायता गर्छौं।<br>विदेशीहरू पनि ढुक्कसँग परामर्श र सम्झौता गर्न सक्नुहुन्छ।'
+    }
+  },
+  bd: {
+    tokuten1: {
+      title: 'বিশেষ সুবিধা ১: সম্পূর্ণ আসবাব, ইলেকট্রনিক্স ও Wi-Fi!',
+      desc: 'বাসায় ওঠার দিন থেকেই আরামদায়ক জীবন শুরু করুন।',
+      list: [
+        'ফ্রিজ, ওয়াশিং মেশিন, মাইক্রোওয়েভসহ প্রধান ইলেকট্রনিক্স',
+        'টেবিল, বিছানাসহ মৌলিক আসবাবপত্র',
+        'হাই-স্পিড ইন্টারনেট (Wi-Fi) সুবিধা রয়েছে'
+      ]
+    },
+    tokuten2: {
+      title: 'বিশেষ সুবিধা ২: ৫০০০ ইয়েন নগদ উপহার!',
+      desc: 'চুক্তি সম্পন্ন হলে ৫০০০ ইয়েন নগদ উপহার পাবেন।<br>প্রাথমিক খরচে ব্যবহার করা যাবে।'
+    },
+    tokuten3: {
+      title: 'বিশেষ সুবিধা ৩: বিদেশিদের জন্য বহুভাষিক সহায়তা!',
+      desc: 'আমরা ইংরেজি, ভিয়েতনামী, মিয়ানমার, নেপালি, বাংলাদেশি ইত্যাদি ভাষায় সহায়তা করি।<br>বিদেশিরা নিশ্চিন্তে পরামর্শ ও চুক্তি করতে পারবেন।'
+    }
+  }
+};
+
+function setTokutenLanguage(lang) {
+  // 特典①
+  const t1 = tokutenTranslations[lang]?.tokuten1 || tokutenTranslations['ja'].tokuten1;
+  document.getElementById('tokuten1-title').textContent = t1.title;
+  document.getElementById('tokuten1-desc').textContent = t1.desc;
+  const list = document.getElementById('tokuten1-list');
+  list.innerHTML = '';
+  t1.list.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    list.appendChild(li);
+  });
+  // 特典②
+  const t2 = tokutenTranslations[lang]?.tokuten2 || tokutenTranslations['ja'].tokuten2;
+  document.getElementById('tokuten2-title').textContent = t2.title;
+  document.getElementById('tokuten2-desc').innerHTML = t2.desc;
+  // 特典③
+  const t3 = tokutenTranslations[lang]?.tokuten3 || tokutenTranslations['ja'].tokuten3;
+  document.getElementById('tokuten3-title').textContent = t3.title;
+  document.getElementById('tokuten3-desc').innerHTML = t3.desc;
+}
+
+// Gắn sự kiện cho nút Tiếng Việt
+window.addEventListener('DOMContentLoaded', function() {
+  var viBtn = document.getElementById('lang-vi');
+  if (viBtn) {
+    viBtn.addEventListener('click', function(e) {
+      setTokutenLanguage('vi');
+    });
+  }
+});
+
+// Gắn sự kiện cho các nút chuyển ngôn ngữ
+window.addEventListener('DOMContentLoaded', function() {
+  const langMap = {
+    'lang-vi': 'vi',
+    'lang-en': 'en',
+    'lang-my': 'my',
+    'lang-ne': 'ne',
+    'lang-bd': 'bd',
+    'lang-ja': 'ja',
+  };
+  Object.keys(langMap).forEach(function(id) {
+    var btn = document.getElementById(id);
+    if (btn) {
+      btn.addEventListener('click', function(e) {
+        setTokutenLanguage(langMap[id]);
+      });
+    }
+  });
+});
+  </script>
+</body>
 </html>
