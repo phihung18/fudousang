@@ -846,6 +846,7 @@
             langLinks.forEach(function(l) { l.classList.remove('active'); });
             this.classList.add('active');
             translatePage(lang);
+            setTokutenLanguage(lang); // ĐẢM BẢO DỊCH TOKUTEN KHI ĐỔI NGÔN NGỮ
             // Đổi video nền khi chọn tiếng Việt, tiếng Anh hoặc tiếng Myanmar
             if (heroVideo) {
               if (lang === 'vi') {
@@ -1108,7 +1109,7 @@
         'testimonials': 'ग्राहक प्रतिक्रिया',
         'testimonials-desc': 'हाम्रो सेवा लिएका ग्राहकका प्रतिक्रिया',
         'testimonial-1': '“मेरो चाहनाअनुसारको घर सिफारिस पाउँदा धेरै खुसी लाग्यो। कर्मचारीको सहयोग पनि उत्कृष्ट थियो।”',
-        'testimonial-2': '“CareEarth & GrowTec को समग्र सहयोगले म सजिलै नयाँ जीवन सुरु गर्न सकेँ।”',
+        'testimonial-2': '“CareEarth & GROWTEC को समग्र सहयोगले म सजिलै नयाँ जीवन सुरु गर्न सकेँ।”',
         'testimonial-3': '“पहिलो पटक एक्लै बस्दा डर लागेको थियो, तर घर खोजी, सम्झौता, सर्ने सबैमा सहयोग पाएको छु।”',
         'start-ideal-life': 'आफ्नो आदर्श जीवन सुरु गर्नुहोस्',
         'cta-desc': 'हामी तपाईंको आवश्यकता अनुसार व्यक्तिगत सेवा दिन्छौं। निःशुल्क परामर्शका लागि सम्पर्क गर्नुहोस्!',
@@ -1330,6 +1331,11 @@ window.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
+});
+
+// Khi load trang, tự động dịch 特典 sang ngôn ngữ mặc định
+window.addEventListener('DOMContentLoaded', function() {
+  setTokutenLanguage('ja');
 });
   </script>
 </body>
