@@ -4,8 +4,10 @@
     }
 
     .hero-section {
-      background-image: linear-gradient(to right, rgba(30, 64, 175, 0.9), rgba(59, 130, 246, 0.8)),
-        url('https://readdy.ai/api/search-image?query=modern%20office%20building%20with%20glass%20facade%2C%20blue%20sky%2C%20professional%20environment%2C%20corporate%20headquarters%2C%20clean%20design%2C%20minimalist%20architecture%2C%20high%20quality%20professional%20photo&width=1920&height=1080&seq=12345&orientation=landscape');
+      /* Đã xóa nền xanh gradient */
+      /* background-image: linear-gradient(to right, rgba(30, 64, 175, 0.9), rgba(59, 130, 246, 0.8)),
+        url('https://readdy.ai/api/search-image?query=modern%20office%20building%20with%20glass%20facade%2C%20blue%20sky%2C%20professional%20environment%2C%20corporate%20headquarters%2C%20clean%20design%2C%20minimalist%20architecture%2C%20high%20quality%20professional%20photo&width=1920&height=1080&seq=12345&orientation=landscape'); */
+      background: none !important;
       background-size: cover;
       background-position: center;
     }
@@ -177,3 +179,73 @@
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
     }
+
+    /* Nút social cố định bên phải */
+    .social-fixed {
+      position: fixed;
+      top: 50%;
+      right: 16px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 100;
+    }
+
+    .social-fixed a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s;
+    }
+
+    .social-fixed a:hover {
+      background: #f0f0f0;
+    }
+
+    .social-fixed svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+.social-fixed {
+  position: fixed;
+  top: 40%;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 1000;
+}
+.social-fixed a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: box-shadow 0.2s, background 0.2s;
+}
+.social-fixed a.facebook {
+  background: #1877f3;
+}
+.social-fixed a.facebook svg {
+  fill: #fff;
+}
+.social-fixed a.mail {
+  background: #222;
+}
+.social-fixed a.mail svg {
+  fill: #fff;
+}
+.social-fixed a:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  filter: brightness(1.1);
+}
