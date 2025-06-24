@@ -210,6 +210,46 @@
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
     }
+
+    @media (max-width: 400px) {
+      .header-logo-group {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+        width: 100% !important;
+      }
+      .header-logo-group img {
+        width: 55px !important;
+        height: auto !important;
+      }
+      .header-company-name {
+        font-size: 0.95rem !important;
+        width: 100% !important;
+        text-align: center !important;
+        word-break: break-word;
+        margin-top: 0.2rem !important;
+      }
+    }
+    /* Responsive logo size: only affect mobile, keep desktop as original */
+    @media (max-width: 600px) {
+      .header-logo-group {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+        width: 100% !important;
+      }
+      .header-logo-group img {
+        width: 55px !important;
+        height: auto !important;
+      }
+      .header-company-name {
+        font-size: 0.95rem !important;
+        width: 100% !important;
+        text-align: center !important;
+        word-break: break-word;
+        margin-top: 0.2rem !important;
+      }
+    }
   </style>
 </head>
 
@@ -217,7 +257,7 @@
   <!-- Header -->
   <header class="w-full bg-white/90 backdrop-blur-sm fixed top-0 z-50 shadow-sm">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="flex items-center space-x-6">
+      <div class="flex items-center space-x-6 header-logo-group">
         <div class="w-32 h-32 flex items-center justify-center">
           <img src="https://staff.careearth.info/application/files/4217/4977/2957/CareEarthrogo_2.png"
             style="width: 140px; height: auto;" alt="CareEarth Logo" class="w-32 h-32 object-contain" />
@@ -227,7 +267,8 @@
             src="https://static.readdy.ai/image/f4ed6560fe62b77c90a02ec2154d7352/3df76e4e339c858768788d7f6ab049bf.png"
             style="width: 100px; height: auto;" alt="GROWTEC Logo" class="w-28 h-28 object-contain" />
         </div>
-        <h1 class="text-3xl md:text-4xl font-bold text-gray-700" data-translate="company-name" style="width: 200px;">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-700 header-company-name" data-translate="company-name"
+          style="width: 200px;">
           CareEarth <span class="text-primary">&</span>
           <span class="text-primary">GrowTec</span>
         </h1>
