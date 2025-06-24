@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+  <link rel="stylesheet" href="social-fixed.css" />
   <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <script>
     tailwind.config = {
@@ -31,15 +32,13 @@
       },
     };
   </script>
-  
+
 </head>
 
 <body class="font-sans bg-white">
   <!-- Header -->
   <header class="w-full bg-white/90 backdrop-blur-sm fixed top-0 z-50 shadow-sm">
-    
-        <!-- Đã xóa nút Facebook và Email trên top -->
-       <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center space-x-6">
         <div class="w-32 h-32 flex items-center justify-center">
           <img src="https://staff.careearth.info/application/files/4217/4977/2957/CareEarthrogo_2.png"
@@ -51,12 +50,13 @@
             style="width: 100px; height: auto;" alt="GROWTEC Logo" class="w-28 h-28 object-contain" />
         </div>
         <h1 class="text-3xl md:text-4xl font-bold text-gray-700" data-translate="company-name" style="width: 200px;">
-          CareEarth <span class="text-primary">&</span>idth: 220px;">
           CareEarth <span class="text-primary">&</span>
           <span class="text-primary">GrowTec</span>
         </h1>
       </div>
       <div class="flex flex-col items-center mx-8 gap-2">
+        <!-- Đã xóa nút Facebook và Email trên top -->
+      </div>
       <div class="flex items-center space-x-8">
         <nav>
           <ul class="flex space-x-6">
@@ -130,7 +130,7 @@
             <div class="w-12 h-12 flex items-center justify-center mx-auto mb-4 bg-blue-400 rounded-full">
               <span style="font-size:2rem;">🏠</span>
             </div>
-            <h3 class="text-white font-bold mb-5" id="tokuten1-title">特典①：家具・家電・Wi-Fiすべて完備！</h3>
+            <h3 class="text-white font-bold mb-5" id="tokuten1-title">特典①:家具・家電・Wi-Fiすべて完備！</h3>
             <p class="text-white text-base mb-2" id="tokuten1-desc">引っ越したその日からすぐに快適な生活をスタートできます。</p>
             <ul class="text-white text-base list-disc pl-5 space-y-1" id="tokuten1-list">
               <li>冷蔵庫・洗濯機・電子レンジなど主要家電を完備</li>
@@ -144,7 +144,7 @@
             <div class="w-12 h-12 flex items-center justify-center mx-auto mb-4 bg-yellow-400 rounded-full">
               <span style="font-size:2rem;">🎁</span>
             </div>
-            <h3 class="text-white font-bold mb-2" id="tokuten2-title">特典②：5000円分のキャッシュプレゼント！</h3>
+            <h3 class="text-white font-bold mb-2" id="tokuten2-title">特典②:5000円分のキャッシュプレゼント！</h3>
             <p class="text-white text-base" id="tokuten2-desc">契約完了後、現金5000円をプレゼントいたします。<br>初期費用のサポートとしてご利用いただけます。</p>
           </div>
           <!-- Stat 3 -->
@@ -153,7 +153,7 @@
             <div class="w-12 h-12 flex items-center justify-center mx-auto mb-4 bg-green-400 rounded-full">
               <span style="font-size:2rem;">🌍</span>
             </div>
-            <h3 class="text-white font-bold mb-2 text-green-700" id="tokuten3-title">特典③：多言語サポートで外国籍の方も安心！</h3>
+            <h3 class="text-white font-bold mb-2 text-green-700" id="tokuten3-title">特典③:多言語サポートで外国籍の方も安心！</h3>
             <p class="text-base mb-2 text-white" id="tokuten3-desc">当社では、英語・ベトナム語・ミャンマー語・ネパール語・バングラデシュ語など、様々な言語に対応可能です。<br>外国人の方でも安心してご相談・ご契約いただけます。</p>
           </div>
         </div>
@@ -166,16 +166,6 @@
             <i class="ri-search-line"></i>
           </div>
         </a>
-        <div class="flex justify-center items-center mt-8 gap-4 hidden md:flex">
-          <!-- Nút Facebook bên trái -->
-          <button class="social-btn facebook-btn social-btn-large" onclick="window.open('https://facebook.com','_blank')">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width:24px;height:24px;vertical-align:middle;"> Facebook
-          </button>
-          <!-- Nút Mail bên phải -->
-          <button class="social-btn mail-btn social-btn-large" onclick="window.location.href='mailto:yourmail@example.com'">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Mail" style="width:24px;height:24px;vertical-align:middle;"> Mail
-          </button>
-        </div>
         <div class="background">
           <!-- Đã xóa các nút Facebook, Tìm nhà, Mail ở giữa -->
         </div>
@@ -637,6 +627,16 @@
     </div>
   </div>
 
+  <!-- Nút social cố định bên phải -->
+  <div class="social-fixed">
+    <a class="facebook" href="https://facebook.com" target="_blank" title="Facebook">
+      <svg width="28" height="28" viewBox="0 0 32 32"><path d="M29 0h-26c-1.654 0-3 1.346-3 3v26c0 1.654 1.346 3 3 3h13v-12h-4v-5h4v-3.5c0-4.136 2.522-6.5 6.377-6.5 1.849 0 3.623.138 4.123.2v4.8h-2.25c-1.762 0-2.25.838-2.25 2.062v2.438h4.5l-1 5h-3.5v12h6c1.654 0 3-1.346 3-3v-26c0-1.654-1.346-3-3-3z"/></svg>
+    </a>
+    <a class="mail" href="mailto:yourmail@example.com" title="Gmail">
+      <svg width="28" height="28" viewBox="0 0 32 32"><path d="M27 4h-22c-1.654 0-3 1.346-3 3v18c0 1.654 1.346 3 3 3h22c1.654 0 3-1.346 3-3v-18c0-1.654-1.346-3-3-3zM27 7.236l-11 8.236-11-8.236v-0.236c0-0.552 0.448-1 1-1h20c0.552 0 1 0.448 1 1v0.236zM4 25v-14.382l10.553 7.899c0.176 0.132 0.389 0.198 0.602 0.198s0.426-0.066 0.602-0.198l10.553-7.899v14.382c0 0.552-0.448 1-1 1h-20c-0.552 0-1-0.448-1-1z"/></svg>
+    </a>
+  </div>
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Hàm dịch trang
@@ -663,10 +663,10 @@
       langLinks.forEach(function(link) {
         link.addEventListener('click', function(e) {
           e.preventDefault();
+          langLinks.forEach(function(l) { l.classList.remove('active'); }); // Xóa active NGAY LẬP TỨC
+          this.classList.add('active'); // Thêm active NGAY LẬP TỨC
           var lang = this.getAttribute('data-lang');
           if (lang && translations[lang]) {
-            langLinks.forEach(function(l) { l.classList.remove('active'); });
-            this.classList.add('active');
             translatePage(lang);
             // Đổi video nền khi chọn tiếng Việt, tiếng Anh hoặc tiếng Myanmar
             if (heroVideo) {
@@ -679,10 +679,10 @@
               } else if (lang === 'my') {
                 heroVideo.querySelector('source').setAttribute('src', 'myanmar.mp4');
                 heroVideo.load();
-                } else if (lang === 'ne') {
+              } else if (lang === 'ne') {
                 heroVideo.querySelector('source').setAttribute('src', 'nepal video.mp4');
                 heroVideo.load();
-                 } else if (lang === 'bn') {
+              } else if (lang === 'bn') {
                 heroVideo.querySelector('source').setAttribute('src', 'banglades.mp4');
                 heroVideo.load();
               } else {
@@ -930,7 +930,7 @@
         'testimonials': 'ग्राहक प्रतिक्रिया',
         'testimonials-desc': 'हाम्रो सेवा लिएका ग्राहकका प्रतिक्रिया',
         'testimonial-1': '“मेरो चाहनाअनुसारको घर सिफारिस पाउँदा धेरै खुसी लाग्यो। कर्मचारीको सहयोग पनि उत्कृष्ट थियो।”',
-        'testimonial-2': '“CareEarth & GrowTec को समग्र सहयोगले म सजिलै नयाँ जीवन सुरु गर्न सकेँ।”',
+        'testimonial-2': '“CareEarth & GROWTEC को समग्र सहयोगले म सजिलै नयाँ जीवन सुरु गर्न सकेँ।”',
         'testimonial-3': '“पहिलो पटक एक्लै बस्दा डर लागेको थियो, तर घर खोजी, सम्झौता, सर्ने सबैमा सहयोग पाएको छु।”',
         'start-ideal-life': 'आफ्नो आदर्श जीवन सुरु गर्नुहोस्',
         'cta-desc': 'हामी तपाईंको आवश्यकता अनुसार व्यक्तिगत सेवा दिन्छौं। निःशुल्क परामर्शका लागि सम्पर्क गर्नुहोस्!',
@@ -1059,7 +1059,7 @@
     },
     tokuten3: {
       title: 'အထူးအခွင့်အရေး ၃: နိုင်ငံခြားသားများအတွက် ဘာသာစကားအထောက်အပံ့!',
-      desc: 'အင်္ဂလိပ်၊ ဗီယက်နမ်၊ မြန်မာ၊ နီပေါ၊ ဘင်္ဂလားဒေ့ရှ် စသည့် ဘာသာစကားများကို ထောက်ပံ့ပေးပါသည်။<br>နိုင်ငံခြားသားများလည်း ယုံကြည်စိတ်ချစွာ တိုင်ပင်စာချုပ်ချနိုင်သည်။'
+      desc: 'အင်္ဂလိပ်၊ ဗီယက်နမ်၊ မြန်မာ၊ နီပေါ၊ ဘင်္ဂလာဒေ့ရှ် စသည့် ဘာသာစကားများကို ထောက်ပံ့ပေးပါသည်။<br>နိုင်ငံခြားသားများလည်း ယုံကြည်စိတ်ချစွာ တိုင်ပင်စာချုပ်ချနိုင်သည်။'
     }
   },
   ne: {
